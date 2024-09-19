@@ -1,12 +1,11 @@
 <html>
     <body>
-        <title>Abhinav Jayesh</title>
         <style>
             .button{
               border-radius: 12px;
-              background-color: green;
+              background-color: blue;
               border: none;
-              color: green;
+              color: blue;
               padding: 2%;
               text-align: center;
               text-decoration: none;
@@ -17,33 +16,29 @@
               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
             html {
-              background-color:grey;
+              background-image: url(https://c8.alamy.com/comp/2HX5D6C/mt-nanda-devi-himalayas-january-30-1937-2HX5D6C.jpg);
+            
             }
-
-            a {
-                text-decoration: none;
-            }
-
             a:link {
-                color: green;
+                color: greenyellow;
             }
 
             a:visited {
-                color: green;
+                color: greenyellow;
             }
             ul {
-                color:black;
+                color:white;
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-size: large;
             }
             p {
-                color:black ;
+                color:white ;
                 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-size: large;
             }
             h2 {
                 text-align: center;
-                color: green;
+                color: greenyellow;
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
             
@@ -54,47 +49,32 @@
                 text-align: center;   
             }
             div.mycontainer {
-                width:66%;
+                width:100%;
                 overflow:auto;
             }
             div.mycontainer div {
                 border-radius: 24px;
                 float: left;
-                width:96%;
+                width:46%;
                 margin:1%;
                 padding: 1%;
-                background-color: white;
-            }
-            div.hello {
-                width:30%;
-                overflow:auto;
-            }
-            div.hello div {
-                border-radius: 24px;
-                float: left;
-                margin: 1%;
-                padding: 1%;
-                background-color: white;
-                width: 97%;
+                background-color: black;
+                height:70%;
             }
         </style>
         <h1>Abhinav Jayesh</h1>
-        <div class="hello" style="float: left;">
+        
+        <div class="mycontainer">
+          <div>
+            <ul>
+              <li><p><a href=abhinav-resume-dark.html class="button">dark theme</a></p></li>
+              <li><p><a href=abhinav-resume-french.html class="button">francais</a></p></li>
+            </ul>
+          </div>
             <div>
-                <ul>
-                  <li><p><a href=abhinav-resume-dark.html class="button" style="color: white;">dark theme</a></p></li>
-                  <li><p><a href=abhinav-resume-french.html class="button" style="color: white;">francais</a></p></li>
-                </ul>
-              </div>
-        <div>
-            <img src="me.jpeg" style="height: auto;width: 96%;">
-<p>This is a picture of me when I went on a tour to Chamonix, France, in this photo, I am on a platform from where we can see many beautiful mountains.</p>
-        </div>
-        
-        </div>
-        
-        <div class="mycontainer" style="float: left;">
-            
+                <img src="me.jpeg">
+  <p>This is a picture of me when I went on a tour to Chamonix, France, in this photo, I am on a platform from where we can see many beautiful mountains.</p>
+            </div>
             <div><h2>About me</h2>
                 <p>I was born in 2010, in <a href=https://en.wikipedia.org/wiki/India target="_blank">India</a> in the state of <a href=https://en.wikipedia.org/wiki/Kerala target="_blank">Kerala</a> I lived in India till I was seven.
                     Then after that, I came to france at the age of seven. I first went to Paris and lived there for a year. I was living in rue mouton duvernet in the 14th arondissement of Paris.
@@ -141,9 +121,9 @@
                     Languages
                 </h2>
                 <ul>
-                    <li><a href=https://en.wikipedia.org/wiki/English_language target="_blank">English</a></li>
-                    <li><a href=https://en.wikipedia.org/wiki/French_language target="_blank">French</a></li>
-                    <li><a href=https://en.wikipedia.org/wiki/Malayalam target="_blank">Malayalam</a></li>
+                    <li><a href=https://fr.wikipedia.org/wiki/Anglais target="_blank">English</a></li>
+                    <li><a href=https://fr.wikipedia.org/wiki/Fran%C3%A7ais target="_blank">French</a></li>
+                    <li><a href=https://fr.wikipedia.org/wiki/Malayalam target="_blank">Malayalam</a></li>
                   </ul>
             </div>
         </div>
