@@ -2,150 +2,163 @@
     <body>
         <title>Abhinav Jayesh</title>
         <style>
-            .button{
-              border-radius: 12px;
-              background-color: green;
-              border: none;
-              color: green;
-              padding: 2%;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            html {
-              background-color:grey;
-            }
-
-            a {
-                text-decoration: none;
-            }
-
-            a:link {
-                color: green;
-            }
-
-            a:visited {
-                color: green;
-            }
             ul {
-                color:black;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: large;
+                font-size: x-large;
             }
-            p {
-                color:black ;
-                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: large;
+            body {
+                font-family: Arial, Helvetica, sans-serif;
             }
             h2 {
                 text-align: center;
-                color: green;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: black;
+                font-size: 50px;
             }
-            
-            
-            h1 {
-                color: green;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                text-align: center;   
+            #header {
+                background-color: #150b33;
+                  padding: 50px 10px;
+                  color: white;
+                  text-align: center;
+                  font-size: 90px; 
+                  font-weight: bold;
+                  position: fixed;
+                  top: 0;
+                  width: 100%;
+                  transition: 0.4s; 
+                  max-height: 15%;
             }
-            div.mycontainer {
-                width:66%;
-                overflow:auto;
+            html {
+                background-color: aliceblue;
             }
-            div.mycontainer div {
-                border-radius: 24px;
+            p {
+                text-align: justify;
+                color: black;
+                font-size: x-large;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            div.contain div {
+                padding-top: 10%;
+                padding-bottom: 10%;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+            div.contain {
+                margin-left: 0%;
+                float: right;
+                width: 80%;
+                margin-top: 15%;
+            }
+            a.sidebara {
+                background-color: grey;
+                width: 100%;
+                height: auto;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                color: white;
+                margin: 0%;
+                margin-top: 0%;
+                margin-bottom: 0%;
+                font-size: medium;
+            }
+            a:link {
+                color: darkslategray;
+                text-decoration: none;
+            }
+            a:visited {
+                color: darkslategray;
+                text-decoration: none;
+            }
+            div.sidebar {
+                background-color: grey;
                 float: left;
-                width:96%;
-                margin:1%;
-                padding: 1%;
-                background-color: white;
-            }
-            div.hello {
-                width:30%;
-                overflow:auto;
-            }
-            div.hello div {
-                border-radius: 24px;
-                float: left;
-                margin: 1%;
-                padding: 1%;
-                background-color: white;
-                width: 97%;
+                width: 20%;
+                height: 1000%;
+                text-align: center;
+                position: fixed;
+                float: top;
             }
         </style>
-        <h1>Abhinav Jayesh</h1>
-        <div class="hello" style="float: left;">
-            <div>
-                <ul>
-                  <li><p><a href=abhinav-resume-french-dark.html class="button" style="color: white;">theme sombre</a></p></li>
-                  <li><p><a href=index.html class="button" style="color: white;">English</a></p></li>
-                </ul>
-              </div>
-        <div>
-            <img src="me.jpeg" style="height: auto;width: 96%;">
-            <p>Ceci est une photo de moi quand je suis alle a <a href="https://fr.wikipedia.org/wiki/Munich" target="_blank">Munich</a> comme nous pouvons le voir c'est une tres belle ville.</p>
+        <div class="sidebar">
+        <div><a href="index.html" class="sidebara" style="color: white;">English</a></div>
+        <div><a href="#mylife" class="sidebara" style="color: white;">Ma vie</a></div>
+        <div><a href="#1" class="sidebara" style="color: white;">Mon éducation</a></div>
+        <div><a href="#2" class="sidebara" style="color: white;">Mes interêts</a></div>
+        <div><a href="#3" class="sidebara" style="color: white;">Ce que je cherche?</a></div>
+        <div><a href="#4" class="sidebara" style="color: white;">Activités</a></div>
+        <div><a href="#5" class="sidebara" style="color: white;">Me contacter</a></div>
+        <div><a href="#6" class="sidebara" style="color: white;">Langues</a></div>
         </div>
-        
+        <div class="contain">
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                </head>
+                <body>
+                
+                <div id="header">Abhinav Jayesh</div>
+                <div style="padding: 0%; margin-top: 0%;">
+                    <img src="me.jpeg" width="100%" height="auto">
+                </div>
+                
+                <div style="background-color: aquamarine;" id="mylife">
+                  <p></p>
+                  <h2>Ma vie</h2>
+                  <p>J'étais né en Inde dans l'état du Kerala. J'ai vécu en Inde jusqu'a l'âge de sept ans. Puis j'ai déménagé, à Paris. J'y étais pendant un an. Je vivais dans la rue Mouton Duvernet dans le 14eme arrondissement de Paris. Lorsque j'étais là bas, j'allais à l'école élémentaire Delambre. J'allais dans les cours UPE2A qui étaient des cours pour les gens qui ne savent pas parler Francais. Les cours m'ont beacoup aidé, car en deux mois, je pouvais parler Francais. Après, je suis arrivé à Sceaux, qui est l'endroit où je vis maintenant.</p>
+                </div>
+                </body>
+        <div style="background-color: burlywood;" id="1"><h2>Mon éducation</h2>
+        <p>J'ai commencé mon éducation à <a href="https://en.wikipedia.org/wiki/Bangalore" target="_blank">Bengaluru</a>. J'ai commencé à etudier à <a href="https://mountlitera.com/" target="_blank">Mount Litera Zee School</a>. Plus tard, je me suis inscris à <a href="https://www.vydehischool.com/" target="_blank">Vydehi School of Excellence</a>. C'était la fin de ma vie en Inde. Puis je suis venu en France ou j'ai commencé mon education à l'école élémentaire Delambre. Puis, quand j'ai déménagé à Sceaux, j'ai commencé à aller à l'école élémentaire des Clos Saint Marcel. L'école était que jusqu'au CM2. A cause de cela, je devais changer d'école. C'est après cela que j'ai commencé à aller au <a href="https://lyc-mariecurie-sceaux.ac-versailles.fr/" target="_blank">Cité scolaire Marie-Curie.</a></p>
         </div>
-        
-        <div class="mycontainer" style="float: left;">
-            
-            <div><h2>Ma vie</h2>
-                <p>J'etais ne en 2010, en <a href=https://fr.wikipedia.org/wiki/Inde target="_blank">Inde</a> dans l'etat du <a href=https://fr.wikipedia.org/wiki/Kerala target="_blank">Kerala</a> J'ai vecu en Inde jusqu'a l'age de 7 ans.
-                  Puis je suis venu en France a l'age de 7 ans. Puis je suis alle a Paris et j'ai vecu la bas pendant un an. Je vivais dans la rue mouton duvernet dans le 14eme arrondissement.
-                  Lorsque j'etais la bas, j'allais dans l'ecole Delambre, J'etais dans la classe UPE2A, car je ne savais pas parler francais. J'ai appris a parler francais en 2 mois.
-                  Puis je suis arrive a sceaux et je n'ai pas demenage depuis.</p>
-            </div>
-            <div>
-              <h2>Mon education</h2>
-                <p>En Inde, j'etais a <a href=https://en.wikipedia.org/wiki/Bangalore target="_blank">Bangalore</a>, la bas j'ai etudie dans de differentes ecoles. J'ai etudie a <a href=https://mountlitera.com/ target="_blank"> Mount litera Zee school</a> et a <a href=https://www.vydehischool.com/ target="_blank">Vydehi school of excellence</a>.
-                  Puis je suis arrive en France et j'ai etudie a l'ecole delambre <a href=https://www.paris.fr/lieux/ecole-elementaire-delambre-507 target="_blank">Ecole elementaire Delambre</a>, a l'<a href=https://www.education.gouv.fr/annuaire/92330/sceaux/ecole/0921221c/ecole-elementaire-publique-clos-saint-marcel.html target="_blank">ecole elementaire des Clos saint marcel</a> puis j'ai commence a etudier au <a href= https://lyc-mariecurie-sceaux.ac-versailles.fr/ target="_blank">Cite scolaire Marie Curie</a> qui est l'endroit ou j'etudie toujours.
-                    </p>             
-            </div>
-            <div>
-                <h2>Centre d'interets</h2>
-                <ul>
-                  <li>Maths, je m'interesse sutout a l'<a href=https://en.wikipedia.org/wiki/Arithmetic target="_blank">arithmetique</a>.</li>
-                  <li>programmage, ce site a ete entierement programme par moi.</li>
-                  <li>ecriture au clavier, je tape a une vitesse de 132 mots par minute, la moyenne des adultes est de 40 mots pas minute, je m'entraine a taper sur <a href=https://monkeytype.com/ target="_blank">monkeytype</a></li>
-                  <li>claviers mechaniques, mon clavier est le <a href=https://www.drevo.net/calibur-v2-te target="_blank">Drevo calibur v2 TE</a></li>
-                  <li>les Montagnes, je connais la taille de tous les montagnes qui ont plus de 8000m.</li>
-                  </ul>
-            </div>
-            <div>
-                <h2>Ce que je cherche</h2>
-                <p>Je cherche un endroit pour faire mon stage de 3eme qui est du 16 au 20 decembre.</p>
-            </div>
-            <div>
-                <h2>Activites</h2>
-                <ul>
-                  <li>J'ai participe aux olympiades de quatrieme de mathematiques.</li>
-                  <li>Je joue au Volleyball tous les mercredis a l'AS marie curie.</li>
-                  <li>Je joue aussi au badminton a l'AS marie curie tous les mardis.</li>
-                  </ul>
-            </div>
-            <div>
-                <h2>Contactez moi</h2>
-                <ul>
-                  <li>Vous pouvez me contacter sur github <a href=https://github.com/ target="_blank">github</a>, my nom est abhinav-jay</li>
-                  <li>Vous pouvez aussi me contacter via e-mail <a href="mailto:abhinav.in.mail@gmail.com" target="_blank">e-mail</a></li>
-                  </ul>
-            </div>
-            <div>
-                <h2>
-                    Langues
-                </h2>
-                <ul>
-                    <li><a href=https://en.wikipedia.org/wiki/English_language target="_blank">Anglais</a></li>
-                    <li><a href=https://en.wikipedia.org/wiki/French_language target="_blank">Francais</a></li>
-                    <li><a href=https://en.wikipedia.org/wiki/Malayalam target="_blank">Malayalam</a></li>
-                  </ul>
-            </div>
+        <div style="background-color: #150b33" id="2"><h2 style="color: white;">Mes interêts</h2>
+        <ul style="color: white;">
+            <li style="color: white;">Mathématiques-Je suis surtout interessé par l'Arithmétique.</li>
+            <li  style="color: white;">Programmage-J'ai fait ce site. Je peux aussi programmer en Python.</li>
+            <li style="color: white;">Dactylographie-J'écris a une vitesse de 132 mots par minute(WPM). En comparaison, en moyenne, un adulte écris a une vitesse de 40 WPM.</li>
+            <li style="color: white;">Claviers méchaniques-Mon clavier est un Drevo Calibur v2 TE.</li>
+            <li style="color: white;">Montagnes-Je connais la hauteur de tous les montagnes qui ont une hauteur superieure a 8000m.</li>
+            <li style="color: white;">Rubik's cube-Je sais résoudre le <a href="https://en.wikipedia.org/wiki/Pyraminx" target="_blank" style="color: antiquewhite;">Pyraminx,</a> le <a href="https://en.wikipedia.org/wiki/Rubik%27s_Cube" target="_blank" style="color: antiquewhite;">3x3,</a> <a href="https://en.wikipedia.org/wiki/Professor%27s_Cube" target="_blank" style="color: antiquewhite;">le 5x5,</a> et le <a href="https://en.wikipedia.org/wiki/Megaminx" target="_blank" style="color: antiquewhite;">Megaminx.</a></li>
+        </ul>
         </div>
+        <div id="3">
+            <h2>Ce que je cherche</h2>
+            <p>Je cherche un endroit où je pourrais faire mon stage de troisième qui est du 16 au 20 décembre. Si vous voulez en savoir plus sur mes interêts, allez dans <a href="#2">la partie interêts.</a></p>
+        </div>
+        <div  id="4" style="background-color: beige;">
+            <h2>Activités</h2>
+            <ul>
+                <li>L'année dernière, j'ai participé aux olympiades de mathématiques.</li>
+                <li>Je joue au volley-ball tous les mercredis à l'association sportive Marie Curie.</li>
+                <li>Je joue aussi au badminton tous les mardis à l'AS badminton Marie Curie.</li>
+            </ul>
+        </div>
+        <div  id="5" style="background-color: aqua;">
+            <h2>Me contacter</h2>
+            <ul>
+                <li>Vous pouvez me contacter sur <a href="https://github.com/abhinav-jay?tab=overview&from=2023-12-01&to=2023-12-31" target="_blank">github</a>, mon pseudo est abhinav-jay.</li>
+                <li>Vous pouvez aussi me contacter par <a href="mailto:abhinav.in.mail@gmail.com" target="_blank">e-mail.</a></li>
+            </ul>
+        </div>
+        <div id="6" style="background-color: lightcyan;">
+            <h2>Langues</h2>
+            <ul>
+                <li>Anglais (courant)</li>
+                <li>Francais (courant)</li>
+                <li><a href="https://en.wikipedia.org/wiki/Malayalam" target="_blank">Malayalam</a> (langue maternelle)</li>
+                <li>Allemand (débutant)</li> 
+            </ul>
+        </div>
+        </div>
+        </div>           
     </body>
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("header").style.fontSize = "30px";
+          } else {
+            document.getElementById("header").style.fontSize = "90px";
+          }
+        }
+        </script>
 </html>
