@@ -1,0 +1,95 @@
+           ul {
+                font-size: x-large;
+		color: turquoise;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h2 {
+                text-align: center;
+                color: white;
+                font-size: 50px;
+		margin: 20px;
+            }
+            .header {
+                background-color: black;
+                  padding: 50px 10px;
+                  color: turquoise;
+                  text-align: left;
+                  font-size: 30px;
+                  font-weight: bold;
+		  text-align: center;
+                  top: 0;
+                  width: 100%;
+                  transition: 0.4s; 
+                  max-height: 10%;
+                  min-width: 73.5%;
+                  float: right;
+		  border-bottom: 1px solid turquoise;
+            }
+            html {
+                background-color: black;
+            }
+            p {
+                text-align: left;
+                color: turquoise;
+                font-size: x-large;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .contain div {
+                padding-top: 200px;
+                padding-bottom: 200px;
+                padding-left: 200px;
+                padding-right: 200px;
+		max-height: 30%;
+		background-color: black;
+		margin-top: 1px;
+            }
+	    .contain {
+		background-color: turquoise;
+		margin-top: 100px;
+	    }
+	    img {
+		margin-bottom: 10px;
+	    }
+            .sidebara {
+		background-color: black;
+		padding: 20px;
+		border-radius: 5px;
+                height: auto;
+		overflow: auto;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 0%;
+                margin-top: 0%;
+                margin-bottom: 0%;
+		border: 1px solid turquoise;
+            }
+            a:link {
+                color: antiquewhite;
+                text-decoration: none;
+            }
+            a:visited {
+                color: antiquewhite;
+                text-decoration: none;
+            }
+            div.sidebar {
+                background-color: black;
+                min-height: 100px;
+		max-height: 100px;
+		margin-top: 0px;
+		border-bottom: 1px solid turquoise;
+		overflow-x: auto;
+		white-space: nowrap;
+            }
+	    .sidebar a{
+		color: turquoise;
+	    }
+	    div.stay {		
+		top: 0;
+		float: left;
+		width: 100%;
+		position: fixed;
+		top: 0;
+	    }
