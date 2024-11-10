@@ -44,10 +44,12 @@
 		max-height: 30%;
 		background-color: black;
 		margin-top: 1px;
+		text-align: center;
             }
 	    .contain {
 		background-color: turquoise;
 		margin-top: 100px;
+		width: 100%;
 	    }
 	    img {
 		margin-bottom: 10px;
