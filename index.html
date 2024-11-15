@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
+<div id="wrapper">
 <html>
   <head>
-    <meta name="viewport" content="width=1024">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  </head>
   <body>
     <div class="stay">
-    <div class="header"> Abhinav Jayesh </div>
+    <div class="float">
+	  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+    </div>
+    <div class="float">  
+      Abhinav Jayesh 
+    </div>
+    </div>
     <title>Abhinav Jayesh</title>
-      <div class="sidebar">
+    <div class="sidebar" id="myNav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <p>
-	<a href="abhinav-resume-french.html" class="sidebara">Français</a>
-	<a href="#0" class="sidebara">About me</a>
-        <a href="#1" class="sidebara">My education</a>
-        <a href="#2" class="sidebara">My interests</a>
-        <a href="#3" class="sidebara">What am I looking for?</a>
-        <a href="#4" class="sidebara">Activities</a>
-        <a href="#5" class="sidebara">Contact me</a>
-        <a href="#6" class="sidebara">Languages</a>	
+	<a href="abhinav-resume-french.html" class="sidebara" onclick="closeNav()">Français</a>
+	<a href="#0" class="sidebara" onclick="closeNav()">About me</a>
+        <a href="#1" class="sidebara" onclick="closeNav()">My education</a>
+        <a href="#2" class="sidebara" onclick="closeNav()">My interests</a>
+        <a href="#3" class="sidebara" onclick="closeNav()">What am I looking for?</a>
+        <a href="#4" class="sidebara" onclick="closeNav()">Activities</a>
+        <a href="#5" class="sidebara" onclick="closeNav()">Contact me</a>
+        <a href="#6" class="sidebara" onclick="closeNav()">Languages</a>	
 	</p>
       </div>
     </div>
@@ -27,10 +34,7 @@
           <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 </head>
-                <div style="padding: 0%; border-radius: 12px">
                     <img src="me.jpeg" width="100%" height="auto">
-                </div>
-                
                 <div id="0">
                   <p></p>
                   <h2>About me</h2>
@@ -87,3 +91,13 @@
 </div>           
 </body>
 </html>
+</div>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>

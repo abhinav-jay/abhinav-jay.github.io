@@ -3,17 +3,24 @@
       <title>Abhinav Jayesh</title>
       <meta name="viewport" content="width=1024">
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <div class="stay">
-	  	<div class="header">Abhinav Jayesh</div>
-	<div class="sidebar">
+  <div class="stay">
+    <div class="float">
+	  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+    </div>
+    <div class="float">  
+      Abhinav Jayesh
+    </div>
+    </div>
+  <div class="sidebar" id="myNav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <p><a href="index.html" class="sidebara">English</a>
-        <a href="#0" class="sidebara">Ma vie</a>
-        <a href="#1" class="sidebara">Mon éducation</a>
-        <a href="#2" class="sidebara">Mes interêts</a>
-        <a href="#3" class="sidebara">Ce que je cherche?</a>
-        <a href="#4" class="sidebara">Activités</a>
-        <a href="#5" class="sidebara">Me contacter</a>
-        <a href="#6" class="sidebara">Langues</a></p>
+        <a href="#0" class="sidebara" onclick="closeNav()">Ma vie</a>
+        <a href="#1" class="sidebara" onclick="closeNav()">Mon éducation</a>
+        <a href="#2" class="sidebara" onclick="closeNav()">Mes interêts</a>
+        <a href="#3" class="sidebara" onclick="closeNav()">Ce que je cherche?</a>
+        <a href="#4" class="sidebara" onclick="closeNav()">Activités</a>
+        <a href="#5" class="sidebara" onclick="closeNav()">Me contacter</a>
+        <a href="#6" class="sidebara" onclick="closeNav()">Langues</a></p>
         </div>
 	</div>
         <div class="contain">
@@ -68,6 +75,15 @@
             </ul>
         </div>
         </div>
-        </div>           
+</div>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
     </body>
 </html>

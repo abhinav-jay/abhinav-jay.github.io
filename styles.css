@@ -1,7 +1,21 @@
-           ul {
+    #warning-message { display: none; }
+    @media only screen and (orientation:portrait){
+        #wrapper { display:none; }
+        #warning-message { display:block; }
+    }
+    @media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+    }
+
+            ul {
                 font-size: x-large;
 		color: turquoise;
             }
+	    h1 {
+		text-align: center;
+		color: turquoise;
+		font-size: 50px;
+	    }
             body {
                 font-family: Arial, Helvetica, sans-serif;
             }
@@ -27,9 +41,11 @@
                   float: right;
 		  border-bottom: 1px solid turquoise;
             }
+
             html {
                 background-color: black;
             }
+
             p {
                 text-align: left;
                 color: turquoise;
@@ -37,18 +53,18 @@
                 font-family: Arial, Helvetica, sans-serif;
             }
             .contain div {
-                padding-top: 200px;
-                padding-bottom: 200px;
-                padding-left: 200px;
-                padding-right: 200px;
+		padding-top: 5vw;
+                padding-bottom: 5vw;
+                padding-left: 5vw;
+                padding-right: 5vw;
 		max-height: 30%;
 		background-color: black;
 		margin-top: 1px;
-		text-align: center;
+		text-align: left;
             }
 	    .contain {
 		background-color: turquoise;
-		margin-top: 100px;
+		margin-top: 0%;
 		width: 100%;
 	    }
 	    img {
@@ -76,22 +92,79 @@
                 color: antiquewhite;
                 text-decoration: none;
             }
-            div.sidebar {
-                background-color: black;
-                min-height: 100px;
-		max-height: 100px;
-		margin-top: 0px;
-		border-bottom: 1px solid turquoise;
-		overflow-x: auto;
-		white-space: nowrap;
-            }
-	    .sidebar a{
+      .sidebar a{
 		color: turquoise;
 	    }
-	    div.stay {		
+      div.stay {
+	  display: inline-block;
 		top: 0;
 		float: left;
-		width: 100%;
 		position: fixed;
-		top: 0;
 	    }
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sidebar a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover, .sidebar a:focus {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar a {font-size: 20px}
+  .sidebar .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.float {
+    width: auto;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid turquoise;
+    margin-left: 10px;
+    margin-top: 3%;
+    top: 0;
+    min-height: 10%;
+    max-height: 10%;
+    font-size: 30px;
+  background-color: rgba(100, 100, 100, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
