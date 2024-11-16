@@ -9,11 +9,11 @@
 
             ul {
                 font-size: x-large;
-		color: turquoise;
+		color: white;
             }
 	    h1 {
 		text-align: center;
-		color: turquoise;
+		color: #007399;
 		font-size: 50px;
 	    }
             body {
@@ -28,7 +28,7 @@
             .header {
                 background-color: black;
                   padding: 50px 10px;
-                  color: turquoise;
+                  color: #007399;
                   text-align: left;
                   font-size: 30px;
                   font-weight: bold;
@@ -39,7 +39,6 @@
                   max-height: 10%;
                   min-width: 73.5%;
                   float: right;
-		  border-bottom: 1px solid turquoise;
             }
 
             html {
@@ -48,7 +47,7 @@
 
             p {
                 text-align: left;
-                color: turquoise;
+                color: white;
                 font-size: x-large;
                 font-family: Arial, Helvetica, sans-serif;
             }
@@ -63,7 +62,7 @@
 		text-align: left;
             }
 	    .contain {
-		background-color: turquoise;
+		background-color: #007399;
 		margin-top: 0%;
 		width: 100%;
 	    }
@@ -82,7 +81,7 @@
                 margin: 0%;
                 margin-top: 0%;
                 margin-bottom: 0%;
-		border: 1px solid turquoise;
+		border: 1px solid #007399;
             }
             a:link {
                 color: antiquewhite;
@@ -93,11 +92,12 @@
                 text-decoration: none;
             }
       .sidebar a{
-		color: turquoise;
+		color: #007399;
 	    }
       div.stay {
 	  display: inline-block;
-		top: 0;
+	  top: 0;
+	  margin-top: 2vw;
 		float: left;
 		position: fixed;
 	    }
@@ -152,14 +152,12 @@
 }
 
 .float {
-    width: auto;
     background-color: black;
     color: white;
     padding: 10px;
     border-radius: 12px;
-    border: 1px solid turquoise;
+    border: 1px solid #007399;
     margin-left: 10px;
-    margin-top: 3%;
     top: 0;
     min-height: 10%;
     max-height: 10%;
@@ -167,4 +165,23 @@
   background-color: rgba(100, 100, 100, 0.4);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+.closebtn {
+    border-radius: 12px;
+    text-align: center;
+    width: 4vw;
+    height: 4vw;
+    background-color: rgba(80, 150, 200, 0.4);
+    border: 5px solid #007399;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+@media only screen and (max-width: 600px) {
+    .float {
+	display: none;
+    }
+    .stay {
+	display: none;
+    }
 }

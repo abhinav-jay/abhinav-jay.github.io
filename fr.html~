@@ -1,19 +1,18 @@
+<!doctype HTML>
 <html>
     <body>
       <title>Abhinav Jayesh</title>
       <meta name="viewport" content="width=1024">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-  <div class="stay">
-    <div class="float">
-	  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
-    </div>
-    <div class="float">  
-      Abhinav Jayesh
-    </div>
-    </div>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <body>
+       <div class="stay">
+	<a href="index.html" style="color: white;" class="float">Choisir la langue / Choose language</a>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="float">&#9776; menu</span>
+	<p class="float">Le site d'Abhinav Jayesh</p>
+    </div> 
   <div class="sidebar" id="myNav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <p><a href="index.html" class="sidebara">English</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <p>
         <a href="#0" class="sidebara" onclick="closeNav()">Ma vie</a>
         <a href="#1" class="sidebara" onclick="closeNav()">Mon éducation</a>
         <a href="#2" class="sidebara" onclick="closeNav()">Mes interêts</a>
@@ -32,7 +31,6 @@
                   <h2>Ma vie</h2>
                   <p>J'étais né en Inde dans l'état du Kerala. J'ai vécu en Inde jusqu'a l'âge de sept ans. Puis j'ai déménagé, à Paris. J'y étais pendant un an. Je vivais dans la rue Mouton Duvernet dans le 14eme arrondissement de Paris. Lorsque j'étais là bas, j'allais à l'école élémentaire Delambre. J'allais dans les cours UPE2A qui étaient des cours pour les gens qui ne savent pas parler Francais. Les cours m'ont beacoup aidé, car en deux mois, je pouvais parler Francais. Après, je suis arrivé à Sceaux, qui est l'endroit où je vis maintenant.</p>
                 </div>
-                </body>
         <div id="1"><h2>Mon éducation</h2>
         <p>J'ai commencé mon éducation à <a href="https://en.wikipedia.org/wiki/Bangalore" target="_blank">Bengaluru</a>. J'ai commencé à etudier à <a href="https://mountlitera.com/" target="_blank">Mount Litera Zee School</a>. Plus tard, je me suis inscris à <a href="https://www.vydehischool.com/" target="_blank">Vydehi School of Excellence</a>. C'était la fin de ma vie en Inde. Puis je suis venu en France ou j'ai commencé mon education à l'école élémentaire Delambre. Puis, quand j'ai déménagé à Sceaux, j'ai commencé à aller à l'école élémentaire des Clos Saint Marcel. L'école était que jusqu'au CM2. A cause de cela, je devais changer d'école. C'est après cela que j'ai commencé à aller au <a href="https://lyc-mariecurie-sceaux.ac-versailles.fr/" target="_blank">Cité scolaire Marie-Curie.</a></p>
         </div>

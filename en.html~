@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<div id="wrapper">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  </head>
+  <body>
+    <div class="stay">
+	<a href="index.html" style="color: white;" class="float">Choisir la langue / Choose language</a>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="float">&#9776; menu</span>
+	<p class="float">Abhinav Jayesh's website</p>
+    </div> 
+    <title>Abhinav Jayesh</title>
+    <div class="sidebar" id="myNav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p>
+	<a href="#0" class="sidebara" onclick="closeNav()">About me</a>
+        <a href="#1" class="sidebara" onclick="closeNav()">My education</a>
+        <a href="#2" class="sidebara" onclick="closeNav()">My interests</a>
+        <a href="#3" class="sidebara" onclick="closeNav()">What am I looking for?</a>
+        <a href="#4" class="sidebara" onclick="closeNav()">Activities</a>
+        <a href="#5" class="sidebara" onclick="closeNav()">Contact me</a>
+        <a href="#6" class="sidebara" onclick="closeNav()">Languages</a>	
+	</p>
+      </div>
+    </div>
+    <div class="containa">
+      <div class="contain">
+          <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                </head>
+                    <img src="me.jpeg" width="100%" height="auto">
+                <div id="0">
+                  <p></p>
+                  <h2>About me</h2>
+                  <p>I was born in India in the state of Kerala. I lived in India till I was seven. Later I moved to Paris, France. I lived in rue Mouton Duvernet in the 14th arondissement of Paris. Ecole Elementaire Delambre had UPE2A which is a special class for students who don't speak French. I went to that class when we came to France. The class was really helpful, because in two months, I could speak French. After that I moved to Sceaux, where I still live.</p>
+                </div>
+                </body>
+  <div id="1"><h2>My education</h2>
+    
+    <p>I started my educaton in <a href="https://en.wikipedia.org/wiki/Bangalore" target="_blank">Bengaluru</a>. I studied in <a href="https://mountlitera.com/" target="_blank">Mount Litera Zee School</a> and then <a href="https://www.vydehischool.com/" target="_blank">Vydehi School of Excellence</a>. When I moved to France I joined Ecole elementaire Delambre. Later in Sceaux, I joined Ecole elementaire des Clos Saint Marcel. I graduated to <a href="https://lyc-mariecurie-sceaux.ac-versailles.fr/" target="_blank">Cite scolaire Marie-Curie.</a></p>
+    
+        </div>
+        <div style="color: white;" id="2"><h2>My interests</h2>
+        <ul>
+            <li>Maths - I am especially interested in Arithmetic.</li>
+            <li>Programming - I created this website. I can program in Python as well.</li>
+            <li>Typing - I type at a speed of 132 words per minute(WPM). In comparison, an average adult types around 40 WPM.</li>
+            <li>Mechanical keyboards - My keyboard is a Drevo Calibur v2 TE. It has TTC blue switches that I like very much.</li>
+            <li>Mountains - I know the height of every mountain whose summit is above 8000 meters.</li>
+            <li>Rubik's cube - I know to solve the <a href="https://en.wikipedia.org/wiki/Rubik%27s_Cube" target="_blank">3x3,</a> <a href="https://en.wikipedia.org/wiki/Professor%27s_Cube" target="_blank">the 5x5,</a>the <a href="https://en.wikipedia.org/wiki/Pyraminx" target="_blank">Pyraminx </a>, and the <a href="https://en.wikipedia.org/wiki/Megaminx" target="_blank" >Megaminx.</a></li>
+        </ul>
+        </div>
+        <div id="3">
+            <h2>What am I looking for?</h2>
+            <p>I am looking for a place where I can do my troisieme stage from the 16th to the 20th of December. I am interested in a mathematics related job for my future. I would like to do a stage d'observation in a field related to Maths.</p>
+        </div>
+        <div id="4">
+            <h2>Activities</h2>
+            <ul>
+                <li>I participated in the Maths olympiad last year in quatrieme.</li>
+                <li>I play volley-ball every Wednesday. I am part of the AS Volleyball Marie Curie. Last year our team entered the departmental final.</li>
+                <li>I also play badminton every Tuesday at AS badminton Marie Curie.</li>
+            </ul>
+        </div>
+        <div id="5">
+            <h2>Contact me</h2>
+            <ul>
+                <li>You can contact me on <a href="https://github.com/abhinav-jay?tab=overview&from=2023-12-01&to=2023-12-31" target="_blank">github</a>, my name is abhinav-jay.</li>
+                <li>You can also contact me by <a href="mailto:abhinav.in.mail@gmail.com" target="_blank">e-mail.</a></li>
+            </ul>
+        </div>
+        <div id="6">
+            <h2>Languages</h2>
+            <ul>
+                <li>English (fluent)</li>
+                <li>French (fluent)</li>
+                <li><a href="https://en.wikipedia.org/wiki/Malayalam" target="_blank">Malayalam</a> (mother tongue)</li>
+                <li>German (intermediate)</li>
+                <li>Classical Latin (I studied at school for two years)</li>
+                <li>Classical Greek (I started studying this year)</li> 
+            </ul>
+        </div>
+  </div>
+  </div>
+</div>           
+</body>
+</html>
+</div>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
