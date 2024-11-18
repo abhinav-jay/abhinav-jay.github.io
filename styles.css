@@ -179,10 +179,10 @@
 
 @media only screen and (max-width: 600px) {
     .float {
-	display: none;
+	display: block;
     }
     .stay {
-	display: none;
+	display: block;
     }
     
 }
