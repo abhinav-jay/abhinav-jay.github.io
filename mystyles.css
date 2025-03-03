@@ -1,3 +1,7 @@
+img {
+  transform: rotate(90deg);
+}
+
 .credit {
   position: fixed;
   right: 2rem;
