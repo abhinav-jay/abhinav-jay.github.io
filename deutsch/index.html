@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+div {
+    overflow: clip;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    border-radius: 5px;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.right {
+    width: 50%;
+    float: right;
+    margin: auto;
+}
+.left {
+    width: 40%;
+    float: left;
+}
+
+video {
+    height: auto;
+    width: 100%;
+    margin: auto;
+    border-radius: 12px;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    overflow: scroll;
+    display: none;
+    padding: 100px 20px;
+    height: 93%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.header {
+    background: black;
+}
+
+
+#abhinav-raphael {background: url(raphael-abhinav.jpg);}
+#paul {background: url(paul.jpg); color: rgb(21, 21, 21)}
+#leandre {background-color: blue;}
+#florian {background-color: orange;}
+        </style>
+        <title> Deutsch Referat Natur </title>
+    </head>
+    <body>
+        <button class="tablink" onclick="openPage('paul', this, '#3b4252')" id="defaultOpen">Paul</button>
+        <button class="tablink" onclick="openPage('abhinav-raphael', this, 'red')">Abhinav und Raphael</button>
+        <button class="tablink" onclick="openPage('leandre', this, 'blue')">L&#233;andre</button>
+        <button class="tablink" onclick="openPage('florian', this, 'orange')">Florian</button>
+
+        <div id="abhinav-raphael" class="tabcontent">
+            <div class="left">
+                <video controls>
+                    <source src="abhinav-raphael.mp4" type="video/mp4">
+                    <source src="abhinav-raphael.ogg" type="video/ogg">
+                </video> 
+            </div>
+            <div class="right">
+                <h2>Aufnahme aus Broken Spectre, Richard Mosse</h2>
+                <p>Richard Mosse ist ein irischer Fotograf</p>
+            </div>
+        </div>
+
+        <div id="paul" class="tabcontent">
+            <div class="right">
+                <h2>Schmelzendes Eis, Paul Nguyen</h2>
+                <p>biographie</p> 
+            </div>
+            <div class="left">
+                <video controls>
+                    <source src="paul.mp4" type="video/mp4">
+                    <source src="paul.ogg" type="video/ogg">
+                </video> 
+            </div>
+        </div>
+
+        <div id="leandre" class="tabcontent">
+            <h3>L&#233;andre</h3>
+            <p>biographie</p>
+        </div>
+
+        <div id="florian" class="tabcontent">
+            <h3>Florian</h3>
+            <p>biographie</p>
+        </div>
+
+        <script>
+            function openPage(pageName,elmnt,color) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById(pageName).style.display = "block";
+                elmnt.style.backgroundColor = color;
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+
+    </body>
+</html> 
