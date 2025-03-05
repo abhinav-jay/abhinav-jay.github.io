@@ -87,10 +87,10 @@ p {
         <title> Deutsch Referat Natur </title>
     </head>
     <body>
-        <button class="tablink" onclick="openPage('paul', this, '#3b4252')" id="defaultOpen">Paul</button>
-        <button class="tablink" onclick="openPage('abhinav-raphael', this, 'red')">Abhinav und Raphael</button>
-        <button class="tablink" onclick="openPage('leandre', this, 'blue')">L&#233;andre</button>
-        <button class="tablink" onclick="openPage('florian', this, 'orange')">Florian</button>
+        <button class="tablink" onclick="openPage('paul', this, '#e8e8e8','#212121')" id="defaultOpen">Paul</button>
+        <button class="tablink" onclick="openPage('abhinav-raphael', this, 'red', '#e8e8e8')">Abhinav und Raphael</button>
+        <button class="tablink" onclick="openPage('leandre', this, 'blue', '#e8e8e8')">L&#233;andre</button>
+        <button class="tablink" onclick="openPage('florian', this, 'orange', '#212121')">Florian</button>
 
         <div id="abhinav-raphael" class="tabcontent">
             <div class="left">
@@ -129,7 +129,7 @@ p {
         </div>
 
         <script>
-            function openPage(pageName,elmnt,color) {
+            function openPage(pageName,elmnt,color,fg) {
                 var i, tabcontent, tablinks;
                 tabcontent = document.getElementsByClassName("tabcontent");
                 for (i = 0; i < tabcontent.length; i++) {
@@ -141,6 +141,7 @@ p {
                 }
                 document.getElementById(pageName).style.display = "block";
                 elmnt.style.backgroundColor = color;
+                elmnt.style.color = fg;
             }
 
             // Get the element with id="defaultOpen" and click on it
