@@ -12,6 +12,15 @@ body, html {
     font-family: Arial;
 }
 
+.navbar {
+    width: 90%;
+    height: 10%;
+    border-radius: 12px;
+    background: #000000;
+    border: #8c0d07 1px solid;
+    position: fixed;
+}
+            
 div {
     overflow: clip;
 }
@@ -58,7 +67,7 @@ video {
     overflow: scroll;
     display: none;
     padding: 100px 20px;
-    height: 93%;
+    height: 100%;
 }
 
 h1 {
@@ -87,11 +96,12 @@ p {
         <title> Deutsch Referat Natur </title>
     </head>
     <body>
+        <div class="navbar">
         <button class="tablink" onclick="openPage('paul', this, '#e8e8e8','#212121')" id="defaultOpen">Paul</button>
         <button class="tablink" onclick="openPage('abhinav-raphael', this, 'red', '#e8e8e8')">Abhinav und Raphael</button>
         <button class="tablink" onclick="openPage('leandre', this, 'blue', '#e8e8e8')">L&#233;andre</button>
         <button class="tablink" onclick="openPage('florian', this, 'orange', '#212121')">Florian</button>
-
+        </div>
         <div id="abhinav-raphael" class="tabcontent">
             <div class="left">
                 <video controls>
