@@ -14,22 +14,24 @@ body, html {
 
 .navbar {
     width: 90%;
-    border-radius: 12px;
+    margin-left: 5px;
+    border-radius: 24px;
     background: #000000;
     border: #21218c 1px solid;
     position: fixed;
     margin: auto;
     margin-top: 10px;
 }
-            
+
 div {
     overflow: clip;
 }
 
 /* Style tab links */
 .tablink {
-    border-radius: 12px;
-    color: white;
+    border-radius: 24px;
+    background: none;
+    color: white !important;
     float: left;
     border: none;
     outline: none;
@@ -87,20 +89,96 @@ p {
     background: black;
 }
 
+:focus {
+  outline: 0;
+  border-color: #2260ff;
+  box-shadow: 0 0 0 4px #b5c9fc;
+}
+
+.mydict {
+  position: fixed;
+  width: 30%;
+}
+
+.mydict div {
+  display: flex;
+
+  width: 80%;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  padding: 10px;
+}
+
+.mydict input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.mydict input[type="radio"]:checked + span {
+  box-shadow: 0 0 0 0.0625em #0043ed;
+  background-color: #dee7ff;
+  z-index: 1;
+  color: #0043ed;
+}
+
+label span {
+  display: block;
+  cursor: pointer;
+  border: none !important;
+  background-color: #212121;
+  padding: 0.375em .75em;
+  position: relative;
+  box-shadow: 0 0 0 0.0625em #b5bfd9;
+  letter-spacing: .05em;
+  color: #e8e8e8;
+  text-align: center;
+  transition: background .5s ease;
+}
+
+label:first-child span {
+  border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+  border-radius: 0 .375em .375em 0;
+}
+
+label:hover {
+    background-color: #444444 !important;
+}
 
 #abhinav-raphael {background: url(raphael-abhinav.jpg);}
-#paul {background: url(paul.jpg); color: rgb(21, 21, 21)}
+#paul {background: #212121; color: #e8e8e8;}
 #leandre {background-color: blue;}
 #florian {background-color: orange;}
         </style>
         <title> Deutsch Referat Natur </title>
     </head>
     <body>
-        <div class="navbar">
-        <button class="tablink" onclick="openPage('paul', this, '#e8e8e8','#212121')" id="defaultOpen">Paul</button>
-        <button class="tablink" onclick="openPage('abhinav-raphael', this, 'red', '#e8e8e8')">Abhinav und Raphael</button>
-        <button class="tablink" onclick="openPage('leandre', this, 'blue', '#e8e8e8')">L&#233;andre</button>
-        <button class="tablink" onclick="openPage('florian', this, 'orange', '#212121')">Florian</button>
+        <div class="mydict">
+            <div>
+                <label>
+                    <input type="radio" name="radio" checked="" onclick="openPage('paul', this, '#444444')" id="defaultOpen">
+                    <span>Paul</span>
+                </label>
+                <label>
+                    <input type="radio" name="radio" onclick="openPage('abhinav-raphael', this, 'red')">
+                    <span>Abhinav und Raphael</span>
+                </label>
+                <label>
+                    <input type="radio" name="radio" onclick="openPage('leandre', this, 'blue')">
+                    <span>L&#233;andre</span>
+                </label>
+                <label>
+                    <input type="radio" name="radio" onclick="openPage('florian', this, 'orange')">
+                    <span>Florian</span>
+                </label>
+            </div>
         </div>
         <div id="abhinav-raphael" class="tabcontent">
             <div class="left">
@@ -139,7 +217,7 @@ p {
         </div>
 
         <script>
-            function openPage(pageName,elmnt,color,fg) {
+            function openPage(pageName,elmnt,color) {
                 var i, tabcontent, tablinks;
                 tabcontent = document.getElementsByClassName("tabcontent");
                 for (i = 0; i < tabcontent.length; i++) {
@@ -150,8 +228,7 @@ p {
                     tablinks[i].style.backgroundColor = "";
                 }
                 document.getElementById(pageName).style.display = "block";
-                elmnt.style.backgroundColor = color;
-                elmnt.style.color = fg;
+                elmnt.style.backgroundColor = "#444444";
             }
 
             // Get the element with id="defaultOpen" and click on it
