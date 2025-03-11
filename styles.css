@@ -72,6 +72,8 @@ img {
 .sidebara {
     background-color: black;
     padding: 20px;
+    position: sticky;
+    top: 0;
     border-radius: 5px;
     height: auto;
     overflow: auto;
