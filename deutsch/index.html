@@ -122,10 +122,33 @@ p {
 }
 
 .mydict input[type="radio"]:checked + span {
-  box-shadow: 0 0 0 0.0625em #0043ed;
-  background-color: #dee7ff;
+  box-shadow: 0 0 0 0.0625em #00ed43;
+  background-color: #deffe7;
   z-index: 1;
   color: #0043ed;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  --s: 900px; /* control the size */
+  --c1: #020;
+  --c2: #122212;
+  --c3: #213221;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
 }
 
 label span {
@@ -154,10 +177,10 @@ label:hover {
     background-color: #444444 !important;
 }
 
-#abhinav-raphael {background: #212121; color: #e8e8e8}
-#paul {background: #212121; color: #e8e8e8;}
-#leandre {background: #212121; color: #e8e8e8;}
-#florian {background: #212121; color: #e8e8e8;}
+#abhinav-raphael {color: #e8e8e8}
+#paul {color: #e8e8e8;}
+#leandre {color: #e8e8e8;}
+#florian {color: #e8e8e8;}
         </style>
         <title> Deutsch Referat Natur </title>
     </head>
@@ -192,7 +215,7 @@ label:hover {
             <div class="right">
                 <h2>Aufnahme aus Broken Spectre, Richard Mosse</h2>
                 <p>Richard Mosse ist ein Irischer Fotograf.</p>
-                <p>Er wurde 1980 in Kilkenny, Irland geboren. Er lebt jetzt in New York.</p>
+                <p>Richard Mosse wurde 1980 in Kilkenny, Irland geboren, er lebt jetzt in New York. Richard Mosse ist einer bekannter Fotograf. Er ist Jetzt 45 Jahren alt und macht immer noch Fotos.</p>
             </div>
         </div>
 
@@ -211,8 +234,16 @@ label:hover {
         </div>
 
         <div id="leandre" class="tabcontent">
-            <h3>L&#233;andre</h3>
-            <p>biographie</p>
+            <div class="left">
+                <img src="leandre.jpeg">
+            </div>
+            <div class="right">
+                <h2>Marcus Müller</h2>
+                <p>Markus Müller ist ein deutscher Künstler, der für seine gesellschaftskritischen Werke bekannt ist. Seine Malereien und Installationen behandeln Themen wie Umweltschutz und soziale
+                Gerechtigkeit. Er nutzt verschiedene Medien, um
+                auf Missstände aufmerksam zu machen und
+                zum Nachdenken anzuregen.</p>
+            </div>
         </div>
 
         <div id="florian" class="tabcontent">
@@ -220,8 +251,8 @@ label:hover {
                 <img src="florian.jpg">
             </div>
             <div class="right">
-                <h2>Der Wald, Florian</h2>
-                <p>biographie</p>
+                <h2>Der Wald, Flaucci Morian</h2>
+                <p>Flaucci Morian Sie sind ein Cartoonist. Er ist 28 Jahre alt, allein in seinem Leben und traurig darüber. Er ist nicht sehr dumm und wird noch weniger erkannt. Er lebt in Paris und ist PSG-Fan.</p>
             </div>
         </div>
 
