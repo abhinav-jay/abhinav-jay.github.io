@@ -1,3 +1,17 @@
+div {
+	display: inline-block;
+}
+
+#first {
+	/*border-radius: 20px;*/
+	/*/*background: rgba(255, 255, 255, 0.15);*/
+	/*/*backdrop-filter: blur(2px) saturate(180%);*/
+	/*border-radius: 2rem;*/
+	/*box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), */
+	/*	inset 0 4px 20px rgba(255, 255, 255, 0.3);*/
+	margin-top: 10px;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -21,7 +35,13 @@ p,li {
 	font-size: 30px;
 }
 
+#name {
+	width: 40%;
+	text-align: center;
+}
+
 .topnav {
+	width: 100%;
 	backdrop-filter: blur(10px) saturate(180%);
 	position: sticky;
 	top: 0;
@@ -65,7 +85,7 @@ a.a:focus {
 
 .box {
 	padding: 66px;
-	height: 500px;
+	/*height: 500px;*/
 }
 
 .line {
@@ -77,24 +97,25 @@ a.a:focus {
 	background: url("me.jpeg");
 	background-size: cover;
 	z-index: 2;
-	height: 500px;
+	/*height: auto;*/
 	width: 100%;
 	border-radius: 20px;
 }
 
 .glass {
-	width: 50%;
 	padding: 20px;
 	/*text-align: justify;*/
-	margin: auto;
+	/*margin: auto;*/
 	z-index: -1;
-	height: 500px;
+	width: 50%;
 	border-radius: 20px;
-	/*background: rgba(255, 255, 255, 0.15);*/
-	/*backdrop-filter: blur(2px) saturate(180%);*/
+	/*/*background: rgba(255, 255, 255, 0.15);*/
+	/*/*backdrop-filter: blur(2px) saturate(180%);*/
 	border-radius: 2rem;
 	box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
 		inset 0 4px 20px rgba(255, 255, 255, 0.3);
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .right {
@@ -102,12 +123,10 @@ a.a:focus {
 }
 
 .text {
-	width: 40%;
+	/*width: 40%;*/
 	padding: 20px;
 	text-align: center;
 	font-size: 70px;
-
-
 }
 
 .content {
@@ -116,7 +135,7 @@ a.a:focus {
 	/*text-align: justify;*/
 	margin: auto;
 	z-index: -1;
-	height: 500px;
+	/*height: 500px;*/
 }
 
 .left {
@@ -143,17 +162,50 @@ a.a:focus {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.topnav a {display: none;}
-	.topnav a.icon {
+	.topnav .icon {
 		float: right;
 		margin: 5px;
 		display: block;
 	}
+	.box {
+		padding-top: 4px;
+		padding-left: 2px;
+		padding-right: 2px;
+		padding-bottom: 0;
+	}
+	.text {
+		font-size: 40px;
+		width: 100%;
+		text-align: center;
+	}
+	.content {
+		padding: 2px;
+		width: auto;
+	}
+	.right {
+		float: left;
+	}
+	#name {
+		width: 100%;
+		text-align: center;
+	}
+	.glass {
+		width: auto;
+	}
+	#first {
+		padding: 2px !important;
+	}
 }
 
-@media screen and (max-width: 600px) {
-	.topnav.responsive {position: relative;}
+@media screen and (max-width: 800px) {
+	.topnav.responsive {
+		position: sticky;
+	button {
+		display: block;
+	}
+	}
 	.topnav.responsive .icon {
 		position: absolute;
 		font-size: 20px;
@@ -162,7 +214,7 @@ a.a:focus {
 	}
 	.topnav.responsive a {
 		float: none;
-		display: block;
+		display: inline-block;
 		text-align: left;
 	}
 }
@@ -179,7 +231,7 @@ a.a:focus {
 	color: var(--secondary-color);
 	padding: 1em 1.8em;
 	background: var(--primary-color);
-	display: flex;
+	display: flex !important;
 	transition: 0.2s background;
 	align-items: center;
 	gap: 0.6em;
