@@ -159,7 +159,7 @@ a.a:focus {
 }
 
 .topnav .icon {
-	display: none;
+	display: none !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -167,7 +167,7 @@ a.a:focus {
 	.topnav .icon {
 		float: right;
 		margin: 5px;
-		display: block;
+		display: block !important;
 	}
 	.box {
 		padding-top: 4px;
@@ -248,18 +248,22 @@ a.a:focus {
 .activebutton .arrow {
 	margin-top: 1px;
 	width: var(--arrow-width);
-	background: var(--primary-color);
 	height: var(--arrow-stroke);
 	position: relative;
 	transition: 0.2s;
+}
+
+.activebutton {
+	background: var(--primary-color);
 }
 
 .activebutton .arrow::before {
 	content: "";
 	box-sizing: border-box;
 	position: absolute;
-	border: solid var(--secondary-color);
+	border: 1px solid var(--primary-color);
 	border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+	/*background: #fff;*/
 	display: inline-block;
 	top: -3px;
 	right: 3px;
@@ -269,11 +273,11 @@ a.a:focus {
 }
 
 .activebutton:hover {
-	background-color: var(--hover-color);
+	background-color: var(--secondary-color);
 }
 
-.activebutton:hover .arrow {
-	background: var(--secondary-color);
+.arrow {
+	background: var(--primary-color) !important;
 }
 
 .activebutton:hover .arrow:before {
