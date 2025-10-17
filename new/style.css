@@ -273,7 +273,7 @@ a.a:focus {
 }
 
 .activebutton:hover {
-	background-color: var(--secondary-color);
+	background-color: var(--hover-color);
 }
 
 .arrow {
