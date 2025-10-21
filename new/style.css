@@ -1,3 +1,101 @@
+/* Theme Switch */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2.5em;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a2a2a;
+  transition: 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 20px;
+  left: 0.5em;
+  bottom: 0.5em;
+  transition: 0.4s;
+  transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+  box-shadow: inset 8px -4px 0px 0px #fff;
+}
+
+.switch input:checked + .slider {
+  background-color: #00a6ff;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.8em);
+  box-shadow: inset 15px -4px 0px 15px #ffcf48;
+}
+
+.star {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 5px;
+  transition: all 0.4s;
+  height: 5px;
+}
+
+.star_1 {
+  left: 2.5em;
+  top: 0.5em;
+}
+
+.star_2 {
+  left: 2.2em;
+  top: 1.2em;
+}
+
+.star_3 {
+  left: 3em;
+  top: 0.9em;
+}
+
+.switch input:checked ~ .slider .star {
+  opacity: 0;
+}
+
+.cloud {
+  width: 3.5em;
+  position: absolute;
+  bottom: -1.4em;
+  left: -1.1em;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.switch input:checked ~ .slider .cloud {
+  opacity: 1;
+}
+
+
+
 div {
 	display: inline-block;
 }
@@ -18,9 +116,9 @@ html {
 
 body {
 	margin: 0;
-	background-color: #212121;
+	background-color: #e8e8e8;
 	/*background: white;*/
-	color: #e8e8e8;
+	color: #212121;
 	cursor: none;
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
@@ -28,6 +126,27 @@ body {
 		font-style: normal;
 	font-variation-settings:
 		"wdth" 100;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
 }
 
 p,li {
@@ -46,8 +165,7 @@ p,li {
 	position: sticky;
 	top: 0;
 	overflow: hidden;
-	background-color: rgba(53,53,53,0.9);
-	border-bottom: 1px solid #535353;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 a.a {
@@ -85,12 +203,12 @@ a.a:focus {
 
 .box {
 	padding: 66px;
-	/*height: 500px;*/
 }
 
 .line {
-	margin: 10px;
+	/*margin: 10px;*/
 	border-bottom: 1px solid #535353;
+	width: 100%;
 }
 
 .mejpeg {
@@ -145,7 +263,15 @@ a.a:focus {
 
 .topnav a:hover {
 	/*background-color: #ddd;*/
-	color: white;
+	color: #212121;
+}
+
+.dark-mode {
+	background-color: #212121;
+	color: #e8e8e8;
+	.topnav a:hover {
+		color: #e8e8e8;
+	}
 }
 
 .topnav a.active {
@@ -163,10 +289,10 @@ a.a:focus {
 	display: none !important;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1300px) {
 	.topnav a {display: none;}
 	.topnav .icon {
-		float: right;
+		float: left;
 		margin: 5px;
 		display: block !important;
 	}
@@ -201,19 +327,44 @@ a.a:focus {
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1300px) {
 	.topnav.responsive {
-		position: sticky;
-	button {
-		display: block;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		padding: 20px;
+		.icon {
+			float: left;
+		}
+		.menubtn {
+			visibility: hidden;     /* hides the main element’s content */
+			display: inline-block;  /* or block/inline — needed to render :after */
+			width: 1em;             /* optional, depends on layout */
+			height: 1em;
+			position: relative;     /* if you want to position :after */
+		}
+
+		.menubtn:after {
+			visibility: visible;    /* ensures :after is visible */
+			content: "\2715";       /* the ❌ character */
+			display: block;         /* or inline/block/inline-block based on need */
+			position: absolute;     /* optional for positioning */
+			top: 0;
+			left: 0;
+		}
+		button {
+			display: block;
+		}
+		.theme {
+			display: block;
+		}
 	}
-	}
-	.topnav.responsive .icon {
-		position: absolute;
-		font-size: 20px;
-		right: 0;
-		top: 0;
-	}
+	/*.topnav.responsive .icon {*/
+	/*	position: absolute;*/
+	/*	font-size: 20px;*/
+	/*	right: 0;*/
+	/*	top: 0;*/
+	/*}*/
 	.topnav.responsive a {
 		float: none;
 		display: inline-block;
