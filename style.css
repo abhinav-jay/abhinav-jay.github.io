@@ -1,97 +1,97 @@
 /* Theme Switch */
 /* The switch - the box around the slider */
 .switch {
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 4em;
-  height: 2.5em;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	font-size: 17px;
+	position: relative;
+	display: inline-block;
+	width: 4em;
+	height: 2.5em;
+	border-radius: 30px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Hide default HTML checkbox */
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+	opacity: 0;
+	width: 0;
+	height: 0;
 }
 
 /* The slider */
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #2a2a2a;
-  transition: 0.4s;
-  border-radius: 30px;
-  overflow: hidden;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #2a2a2a;
+	transition: 0.4s;
+	border-radius: 30px;
+	overflow: hidden;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 1.2em;
-  width: 1.2em;
-  border-radius: 20px;
-  left: 0.5em;
-  bottom: 0.5em;
-  transition: 0.4s;
-  transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
-  box-shadow: inset 8px -4px 0px 0px #fff;
+	position: absolute;
+	content: "";
+	height: 1.2em;
+	width: 1.2em;
+	border-radius: 20px;
+	left: 0.5em;
+	bottom: 0.5em;
+	transition: 0.4s;
+	transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+	box-shadow: inset 8px -4px 0px 0px #fff;
 }
 
-.switch input:checked + .slider {
-  background-color: #00a6ff;
+.switch input:checked+.slider {
+	background-color: #00a6ff;
 }
 
-.switch input:checked + .slider:before {
-  transform: translateX(1.8em);
-  box-shadow: inset 15px -4px 0px 15px #ffcf48;
+.switch input:checked+.slider:before {
+	transform: translateX(1.8em);
+	box-shadow: inset 15px -4px 0px 15px #ffcf48;
 }
 
 .star {
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  width: 5px;
-  transition: all 0.4s;
-  height: 5px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	width: 5px;
+	transition: all 0.4s;
+	height: 5px;
 }
 
 .star_1 {
-  left: 2.5em;
-  top: 0.5em;
+	left: 2.5em;
+	top: 0.5em;
 }
 
 .star_2 {
-  left: 2.2em;
-  top: 1.2em;
+	left: 2.2em;
+	top: 1.2em;
 }
 
 .star_3 {
-  left: 3em;
-  top: 0.9em;
+	left: 3em;
+	top: 0.9em;
 }
 
-.switch input:checked ~ .slider .star {
-  opacity: 0;
+.switch input:checked~.slider .star {
+	opacity: 0;
 }
 
 .cloud {
-  width: 3.5em;
-  position: absolute;
-  bottom: -1.4em;
-  left: -1.1em;
-  opacity: 0;
-  transition: all 0.4s;
+	width: 3.5em;
+	position: absolute;
+	bottom: -1.4em;
+	left: -1.1em;
+	opacity: 0;
+	transition: all 0.4s;
 }
 
-.switch input:checked ~ .slider .cloud {
-  opacity: 1;
+.switch input:checked~.slider .cloud {
+	opacity: 1;
 }
 
 
@@ -123,33 +123,34 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: <weight>;
-		font-style: normal;
+	font-style: normal;
 	font-variation-settings:
 		"wdth" 100;
 }
 
 ::-webkit-scrollbar {
-  width: 20px;
+	width: 20px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: red; 
-  border-radius: 10px;
+	background: red;
+	border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
+	background: #b30000;
 }
 
-p,li {
+p,
+li {
 	margin: 10px;
 	font-size: 30px;
 }
@@ -161,7 +162,9 @@ p,li {
 
 .topnav {
 	width: 100%;
-	backdrop-filter: blur(10px) saturate(180%);
+	backdrop-filter: blur(30px) saturate(180%);
+	z-index: 9999;
+	background-color: rgba(210, 210, 210, 0.8);
 	position: sticky;
 	top: 0;
 	overflow: hidden;
@@ -174,7 +177,7 @@ a.a {
 }
 
 a.a {
-	background: 
+	background:
 		linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)),
 		linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
 	background-size: 100% 0.1em, 0 0.1em;
@@ -230,7 +233,7 @@ a.a:focus {
 	/*/*background: rgba(255, 255, 255, 0.15);*/
 	/*/*backdrop-filter: blur(2px) saturate(180%);*/
 	border-radius: 2rem;
-	box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
+	box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
 		inset 0 4px 20px rgba(255, 255, 255, 0.3);
 	margin-left: 10px;
 	margin-right: 10px;
@@ -269,8 +272,13 @@ a.a:focus {
 .dark-mode {
 	background-color: #212121;
 	color: #e8e8e8;
+
 	.topnav a:hover {
 		color: #e8e8e8;
+	}
+
+	.topnav {
+		background-color: rgba(33, 33, 33, 0.8);
 	}
 }
 
@@ -290,38 +298,48 @@ a.a:focus {
 }
 
 @media screen and (max-width: 1300px) {
-	.topnav a {display: none;}
+	.topnav a {
+		display: none;
+	}
+
 	.topnav .icon {
 		float: left;
 		margin: 5px;
 		display: block !important;
 	}
+
 	.box {
 		padding-top: 4px;
 		padding-left: 2px;
 		padding-right: 2px;
 		padding-bottom: 0;
 	}
+
 	.text {
 		font-size: 40px;
 		width: 100%;
 		text-align: left;
 		padding: 5px;
 	}
+
 	.content {
 		padding: 2px;
 		width: auto;
 	}
+
 	.right {
 		float: left;
 	}
+
 	#name {
 		width: 100%;
 		text-align: center;
 	}
+
 	.glass {
 		width: auto;
 	}
+
 	#first {
 		padding: 2px !important;
 	}
@@ -333,32 +351,45 @@ a.a:focus {
 		height: 100%;
 		width: 100%;
 		padding: 20px;
+
 		.icon {
 			float: left;
 		}
+
 		.menubtn {
-			visibility: hidden;     /* hides the main element’s content */
-			display: inline-block;  /* or block/inline — needed to render :after */
-			width: 1em;             /* optional, depends on layout */
+			visibility: hidden;
+			/* hides the main element’s content */
+			display: inline-block;
+			/* or block/inline — needed to render :after */
+			width: 1em;
+			/* optional, depends on layout */
 			height: 1em;
-			position: relative;     /* if you want to position :after */
+			position: relative;
+			/* if you want to position :after */
 		}
 
 		.menubtn:after {
-			visibility: visible;    /* ensures :after is visible */
-			content: "\2715";       /* the ❌ character */
-			display: block;         /* or inline/block/inline-block based on need */
-			position: absolute;     /* optional for positioning */
+			visibility: visible;
+			/* ensures :after is visible */
+			content: "\2715";
+			/* the ❌ character */
+			display: block;
+			/* or inline/block/inline-block based on need */
+			position: absolute;
+			/* optional for positioning */
 			top: 0;
 			left: 0;
 		}
+
 		button {
 			display: block;
 		}
+
 		.theme {
 			display: block;
 		}
 	}
+
 	/*.topnav.responsive .icon {*/
 	/*	position: absolute;*/
 	/*	font-size: 20px;*/
@@ -452,4 +483,15 @@ button {
 	align-items: center;
 	gap: 0.6em;
 	font-weight: bold;
+}
+
+.onscroll {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+	transform: translateY(50px);
+}
+
+.onscroll.in-view {
+	opacity: 1;
+	transform: translateY(0);
 }

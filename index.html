@@ -1,42 +1,156 @@
-<!doctype HTML>
+<!DOCTYPE html>
+<html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-   a {
-	color: #b3ccff;
-	text-decoration: none;
-	font-size: 6vw;
-	width: 27vw;
-	float: left;
-	margin: 1vw;
-	padding: 10vw;
-	height: 22vw;
-	text-align: center;
-	border: 5px solid #007399;
-	border-radius: 12px;
-        background-color: rgba(100, 100, 100, 0.4);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-    }
-    html {
-        background-image: url(wall.jpg);
-	background-size: cover;
-	background-position: center;
-    }
-    @media only screen and (max-width: 600px) {
-	a {
-	    width: 70vw;
-	}
-  </style>
-  <title>Choose your language/Choisissez votre langue</title>
-  <link rel="icon" type="image/x-icon" href="logo.svg">
+	<meta name="google-site-verification" content="E9_0uk4iWQKDZRgQmOWire_cOO9CHaZWPrxuVLW03sY" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<title>Abhinav Jayesh's website</title>
+	<link rel="icon" type="image/x-icon" href="a.svg">
 </head>
+
 <body>
-  <div>
-    <a href="new/index.html">English</a>
-  </div>
-  <div>
-    <a href="fr.html">Francais</a> 
-  </div>
-<body>
-  
+	<div class="curzr" hidden>
+		<div class="curzr-dot"></div>
+	</div>
+	<div class="topnav" id="myTopnav">
+		<button class="icon activebutton" onclick="myFunction()">
+			<div class="menubtn">
+				&#8801;
+			</div>
+		</button>
+		<a href="#" class="name">
+			<button class="activebutton">
+				<img src="logo.svg" style="width:100px;height:17px;" alt="Abhinav Jayesh">
+			</button class="activebutton">
+		</a>
+		<a class="theme"><label class="switch">
+				<input checked="true" id="checkbox" type="checkbox" />
+				<span onclick="dark()" class="slider">
+					<div class="star star_1"></div>
+					<div class="star star_2"></div>
+					<div class="star star_3"></div>
+					<svg viewBox="0 0 16 16" class="cloud_1 cloud">
+						<path transform="matrix(.77976 0 0 .78395-299.99-418.63)" fill="#fff"
+							d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925">
+						</path>
+					</svg>
+				</span>
+			</label></a>
+		<button><a href="#about">About</a></button>
+		<button><a href="#education">Education</a></button>
+		<button><a href="#interests">Interests</a></button>
+		<button><a href="#languages">Languages</a></button>
+		<button><a href="fr.html">Français</a></button>
+		<a href="https://github.com/abhinav-jay/" target="_blank" class="active">
+			<button class="activebutton">
+				Contact
+				<div class="arrow-wrapper">
+					<div class="arrow"></div>
+
+				</div>
+			</button>
+		</a>
+	</div>
+
+	<div class="box onscroll" id="first">
+		<div class="text left" id="name">
+			<h2>Abhinav Jayesh</h2>
+		</div>
+		<div class="glass right">
+			<img class="mejpeg right" src="me.jpeg">
+		</div>
+	</div>
+	<div class="line">
+	</div>
+	<div class="box onscroll" id="about">
+		<div class="text left">
+			<h2>About me</h2>
+		</div>
+		<div class="glass content right">
+			<p>I was born in India in the state of Kerala. I lived in India till I was seven. Later I moved
+				to Paris, France. I lived in rue Mouton Duvernet in the 14th arondissement of Paris.
+				Ecole Elementaire Delambre had UPE2A which is a special class for students who don't
+				speak French. I went to that class when we came to France. The class was really helpful,
+				because in two months, I could speak French. After that I moved to Sceaux, where I still
+				live.
+			<p>
+		</div>
+	</div>
+	<div class="line">
+	</div>
+	<div class="box onscroll" id="education">
+		<div class="text left">
+			<h2>Education</h2>
+		</div>
+		<div class="glass content right">
+			<p>I started my educaton in <a class="a" href="https://en.wikipedia.org/wiki/Bangalore"
+					target="_blank">Bengaluru</a>. I studied in <a class="a"
+					href="https://mountlitera.com/" target="_blank">Mount Litera Zee School</a> and
+				then <a class="a" href="https://www.vydehischool.com/" target="_blank">Vydehi School of
+					Excellence</a>. When I moved to France I joined Ecole elementaire Delambre.
+				Later in Sceaux, I joined Ecole elementaire des Clos Saint Marcel. I graduated to <a
+					class="a" href="https://lyc-mariecurie-sceaux.ac-versailles.fr/"
+					target="_blank">Cite scolaire Marie-Curie</a> after that.</p>
+		</div>
+	</div>
+	<div class="line">
+	</div>
+	<div class="box onscroll" id="interests">
+		<div class="text left">
+			<h2>Interests</h2>
+		</div>
+		<div class="glass content right">
+			<ul>
+				<li>Maths - I like Arithmetic the most.</li>
+				<li>Programming - I made this website. I can code in Python as well.</li>
+				<li>Typing - I type at a speed of 144 words per minute(WPM) on a 10 words test. In
+					comparison, an average adult types at around 40 WPM. <a
+						href="https://monkeytype.com/profile/abhiblazer" class="a">This</a> is
+					my
+					monkeytype account.</li>
+				<li>Mechanical keyboards - My keyboard is a Drevo Calibur v2 TE. It has TTC blue
+					switches that I like very much even though it is quite noisy :).</li>
+				<!-- I used to know the things after this but I don't anymore so I removed them. -->
+				<!-- <li>Mountains - I know the height of every mountain whose summit is above 8000 meters. -->
+				<!-- </li> -->
+				<!-- <li>Rubik's cube - I know to solve the <a class="a" -->
+				<!-- 		href="https://en.wikipedia.org/wiki/Rubik%27s_Cube" -->
+				<!-- 		target="_blank">3x3,</a> <a -->
+				<!-- 		href="https://en.wikipedia.org/wiki/Professor%27s_Cube" class="a" -->
+				<!-- 		target="_blank">the 5x5,</a>the <a class="a" -->
+				<!-- 		href="https://en.wikipedia.org/wiki/Pyraminx" target="_blank">Pyraminx -->
+				<!-- 	</a>, and the <a class="a" href="https://en.wikipedia.org/wiki/Megaminx" -->
+				<!-- 		target="_blank">Megaminx.</a></li> -->
+			</ul>
+		</div>
+	</div>
+	<div class="line">
+	</div>
+	<div class="box onscroll" id="languages">
+		<div class="text left">
+			<h2>Languages</h2>
+		</div>
+		<div class="glass content right">
+			<ul>
+				<li><a class="a" href="https://en.wikipedia.org/wiki/English_language"
+						target="_blank">English</a></li>
+				<li><a class="a" href="https://en.wikipedia.org/wiki/French_language"
+						target="_blank">French</a></li>
+				<li><a class="a" href="https://en.wikipedia.org/wiki/Malayalam"
+						target="_blank">Malayalam</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="script.js">
+	</script>
+
+</body>
+
+</html>
