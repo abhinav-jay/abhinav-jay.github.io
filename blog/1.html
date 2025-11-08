@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="google-site-verification" content="E9_0uk4iWQKDZRgQmOWire_cOO9CHaZWPrxuVLW03sY" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Neovim configuration</title>
+  <link rel="icon" type="image/x-icon" href="../a.svg">
+</head>
+
+<body>
+  <div class="curzr" hidden>
+    <div class="curzr-dot"></div>
+  </div>
+  <div class="topnav" id="myTopnav">
+    <button class="icon activebutton" onclick="myFunction()">
+      <div class="menubtn">
+        &#8801;
+      </div>
+    </button>
+    <a href="#" class="name">
+      <button class="activebutton">
+        <img src="logo.svg" style="width:100px;height:17px;" alt="Abhinav Jayesh">
+      </button class="activebutton">
+    </a>
+    <a class="theme"><label class="switch">
+        <input checked="true" id="checkbox" type="checkbox" />
+        <span onclick="dark()" class="slider">
+          <div class="star star_1"></div>
+          <div class="star star_2"></div>
+          <div class="star star_3"></div>
+          <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+            <path transform="matrix(.77976 0 0 .78395-299.99-418.63)" fill="#fff"
+              d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925">
+            </path>
+          </svg>
+        </span>
+      </label></a>
+    <button><a href="../index.html">Main page in English</a></button>
+    <button><a href="../fr.html">site principal en Français</a></button>
+    <button><a href="index.html">Blog index</a></button>
+    <a href="https://github.com/abhinav-jay/" target="_blank" class="active">
+      <button class="activebutton">
+        Contact
+        <div class="arrow-wrapper">
+          <div class="arrow"></div>
+
+        </div>
+      </button>
+    </a>
+  </div>
+  <div class="box onscroll" id="first">
+    <div class="text left" id="name">
+      <h2>Neovim configuration</h2>
+    </div>
+    <div class="glass right">
+      <img class="mejpeg right" src="images/1.png">
+    </div>
+  </div>
+  <center>
+    <div class="info">
+      <div class="info__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+          <path fill="#393a37"
+            d="m12 1.5c-5.79844 0-10.5 4.70156-10.5 10.5 0 5.7984 4.70156 10.5 10.5 10.5 5.7984 0 10.5-4.7016 10.5-10.5 0-5.79844-4.7016-10.5-10.5-10.5zm.75 15.5625c0 .1031-.0844.1875-.1875.1875h-1.125c-.1031 0-.1875-.0844-.1875-.1875v-6.375c0-.1031.0844-.1875.1875-.1875h1.125c.1031 0 .1875.0844.1875.1875zm-.75-8.0625c-.2944-.00601-.5747-.12718-.7808-.3375-.206-.21032-.3215-.49305-.3215-.7875s.1155-.57718.3215-.7875c.2061-.21032.4864-.33149.7808-.3375.2944.00601.5747.12718.7808.3375.206.21032.3215.49305.3215.7875s-.1155.57718-.3215.7875c-.2061.21032-.4864.33149-.7808.3375z">
+          </path>
+        </svg>
+      </div>
+      <div class="info__title">The guide isn't complete yet</div>
+      <div class="content glass onscroll">
+        <div class="info">
+          <div class="info__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+              <path fill="#393a37"
+                d="m12 1.5c-5.79844 0-10.5 4.70156-10.5 10.5 0 5.7984 4.70156 10.5 10.5 10.5 5.7984 0 10.5-4.7016 10.5-10.5 0-5.79844-4.7016-10.5-10.5-10.5zm.75 15.5625c0 .1031-.0844.1875-.1875.1875h-1.125c-.1031 0-.1875-.0844-.1875-.1875v-6.375c0-.1031.0844-.1875.1875-.1875h1.125c.1031 0 .1875.0844.1875.1875zm-.75-8.0625c-.2944-.00601-.5747-.12718-.7808-.3375-.206-.21032-.3215-.49305-.3215-.7875s.1155-.57718.3215-.7875c.2061-.21032.4864-.33149.7808-.3375.2944.00601.5747.12718.7808.3375.206.21032.3215.49305.3215.7875s-.1155.57718-.3215.7875c-.2061.21032-.4864.33149-.7808.3375z">
+              </path>
+            </svg>
+          </div>
+          <div class="info__title">If you haven't installed Neovim, you may need to <a
+              href="https://github.com/neovim/neovim/blob/master/INSTALL.md" class="a">it</a>.</div>
+        </div>
+        <p>&nbsp I started my <a href="https://neovim.io/" class="a">Neovim</a> configuration journey by installing
+          something
+          called <a href="https://github.com/nvim-lua/kickstart.nvim">kickstart.nvim</a> which is a thing with a
+          basic neovim configuration for you to use, as it's name suggests, it isn't a complete, it is just a start.
+          Once you install kickstart.nvim, you should have a <code>~/.config/nvim/init.lua</code> file.
+        </p>
+        <p>&nbsp In that file there is a basic configuration for neovim. Now, if you type <code>nvim</code> in your
+          terminal, neovim should come with a nice theme, a nice stausbar and some stuff like that. </p>
+        <p>&nbsp The plugin manager that kickstart.nvim installs is called <code>lazy.nvim</code>.
+        </p>
+      </div>
+      <div class="glass content">
+        <p>With kickstart.nvim, you can also install other cool plugins, like these for example:
+        </p>
+        <ul>
+          <li><a href="https://github.com/goolord/alpha-nvim"><code>alpha</code></a>, it is a fully customizable greeter
+            for
+            neovim, it has some pre-configured themes too.</li>
+          <li><a href="https://github.com/stevearc/oil.nvim"><code>oil.nvim</code></a>, it is a really cool file
+            explorer
+            for neovim.</li>
+          <li><a href="https://github.com/vzze/calculator.nvim"><code>calculator.nvim</code></a>, it is a really cool
+            Calculator that can calculate expressions you wrote inside the file.</li>
+          <li><a href="https://github.com/folke/noice.nvim"><code>noice.nvim</code></a>, this is a really popular file
+            tree plugin
+            that you can use if you don't like <code>oil.nvim</code>'s navigation style or if you just want your setup
+            to
+            look more like an IDE.</li>
+        </ul>
+      </div>
+  </center>
+  <center>
+    <footer class="onscroll">
+      Made by Abhinav Jayesh using Neovim
+    </footer>
+  </center>
+
+  <script src="script.js">
+  </script>
+
+  <body>
+
+
+</html>
