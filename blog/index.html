@@ -1,79 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta name="google-site-verification" content="E9_0uk4iWQKDZRgQmOWire_cOO9CHaZWPrxuVLW03sY" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <title>blog index</title>
-  <link rel="icon" type="image/x-icon" href="../a.svg">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<meta name="google-site-verification" content="E9_0uk4iWQKDZRgQmOWire_cOO9CHaZWPrxuVLW03sY" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<title>blog index</title>
+	<link rel="icon" type="image/x-icon" href="../a.svg">
 </head>
 
 <body>
-  <div class="curzr" hidden>
-    <div class="curzr-dot"></div>
-  </div>
-  <div class="topnav" id="myTopnav">
-    <button class="icon activebutton" onclick="myFunction()">
-      <div class="menubtn">
-        &#8801;
-      </div>
-    </button>
-    <a href="#" class="name">
-      <button class="activebutton">
-        <img src="../logo.svg" style="width:100px;height:17px;" alt="Abhinav Jayesh">
-      </button class="activebutton">
-    </a>
-    <a class="theme"><label class="switch">
-        <input checked="true" id="checkbox" type="checkbox" />
-        <span onclick="dark()" class="slider">
-          <div class="star star_1"></div>
-          <div class="star star_2"></div>
-          <div class="star star_3"></div>
-          <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-            <path transform="matrix(.77976 0 0 .78395-299.99-418.63)" fill="#fff"
-              d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925">
-            </path>
-          </svg>
-        </span>
-      </label></a>
-    <button><a href="../index.html">Main page in English</a></button>
-    <button><a href="../fr.html">site principal en Français</a></button>
-    <button><a href="index.html">Blog index</a></button>
-    <a href="https://github.com/abhinav-jay/" target="_blank" class="active">
-      <button class="activebutton">
-        Contact
-        <div class="arrow-wrapper">
-          <div class="arrow"></div>
 
-        </div>
-      </button>
-    </a>
-  </div>
-  <a href="1.html" class="atext">
-    <div class="smallbox" id="first">
-      <div class="text left" id="name">
-        <h2>Neovim config</h2>
-      </div>
-      <div class="glass right">
-        <img class="mejpeg right" src="images/1.png">
-      </div>
-    </div>
-  </a>
-  <center>
-    <footer class="onscroll">
-      Made by Abhinav Jayesh using Neovim
-    </footer>
-  </center>
-  <script src="script.js">
-  </script>
+	<div id="myTopnav" class="topnav">
+		<button class="icon activebutton" onclick="myFunction()">
+			<div class="menubtn">
+				&#8801;
+			</div>
+		</button>
+		<a href="#" class="name">
+			<button class="activebutton">
+				<img src="../logo.svg" style="width:100px;height:17px;" alt="Abhinav Jayesh">
+			</button class="activebutton">
+		</a>
+		<button id="light" onclick="dark()">
+			<a class="theme" id="light">
+				<i style="font-size: 20px;" class="fa fa-sun-o"></i>
+			</a>
+		</button>
+		<button id="dark" class="theme" onclick="dark()">
+			<a class="theme" id="dark">
+				<i class="fa fa-moon-o" style="font-size: 20px;"></i>
+			</a>
+		</button>
+		<button><a href="../index.html">Main page in English</a></button>
+		<button><a href="../fr.html">site principal en Français</a></button>
+		<button><a href="index.html">Blog index</a></button>
+		<a href="https://github.com/abhinav-jay/" target="_blank" class="active">
+			<button class="activebutton">
+				Contact
+				<div class="arrow-wrapper">
+					<div class="arrow"></div>
 
-  <body>
+				</div>
+			</button>
+		</a>
+	</div>
+
+	<center>
+		<a href="1.html" class="atext">
+			<div class="smallbox" id="first">
+				<img class="mejpeg right" src="images/1.png">
+				<center>
+					<div class="bloglinktext a" id="name">
+						Neovim config
+					</div>
+				</center>
+			</div>
+		</a>
+	</center>
+
+	<center>
+		<footer class="onscroll">
+			Made by Abhinav Jayesh using Neovim
+		</footer>
+	</center>
+
+	<script src="script.js">
+	</script>
+
+	<body>
 
 
 </html>
