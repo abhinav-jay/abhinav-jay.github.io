@@ -388,11 +388,13 @@ li {
 		width: 100%;
 		text-align: left;
 		padding: 5px;
+		position: absolute;
 	}
 
 	.content {
 		padding: 2px;
 		width: auto;
+		position: absolute;
 	}
 
 	.right {
