@@ -219,7 +219,6 @@ li {
 }
 
 .mejpeg {
-	background: url("me.jpeg");
 	background-size: cover;
 	z-index: 2;
 	/*height: auto;*/
