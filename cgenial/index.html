@@ -4,6 +4,15 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../style.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+	<style>
+		.mathjax {
+			font-size: 1.5em;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+	</style>
 </head>
 
 <body>
@@ -55,9 +64,11 @@
 	</div>
 
 	<div class="box onscroll" id="polariseur">
-		<div class="text">
-			<h2>Qu'est-ce qu'un polariseur</h2>
-		</div>
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>Qu'est-ce qu'un polariseur?</h2>
+			</div>
+		</center>
 		<div class="glass content right">
 			<p>Un polariseur est un objet qui permet de polariser la lumière. La lumière est normalement
 				composé de beaucoup d'ondes électromagnetiques venant de toutes les directions, et le
@@ -72,6 +83,108 @@
 	</div>
 
 	<div class="line">
+	</div>
+
+	<div class="box onscroll" id="paradoxe">
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>Le paradoxe des trois polariseurs</h2>
+			</div>
+		</center>
+		<div class="glass content right">
+			<p> Le paradoxe des trois polariseurs est une chose qui peut nous paraître très étrange mais qui
+				est en fait assez logique si on refléchis. Ce paradoxe dit que lorsqu'il y a deux
+				polariseurs qui sont écartés d'un angle de &#120761;/2, alors aucune lumiére ne parvient
+				a passer ce qui est assez logique car d'après la loi de Malus:
+			</p>
+			<div class="mathjax" style="text-align: center; width: 100%;">
+				\( I = I_{0} \cos^2(\theta) \)<br>
+				et <br>
+				\( \cos^2(\pi/2) = 0 \)
+			</div>
+			<p>
+				donc la nouvelle intensité est égale a 0.<br>
+				On peut vite voir que l'intensité diminue presque toujours lorsqu'on met deux
+				polariseurs, donc on pourrait croire que les polariseurs agissent presque comme des
+				filtres. Mais dans le paradoxe des trois polariseurs, un troisième polariseur vient
+				s'ajouter et au lieu de diminuer l'intensité finale, il l'augmente, ce qui pourrait
+				paraître étrange mais c'est assez logique lorsqu'on réfléchit comme ce sera expliqué
+				dans la prochaine partie.
+			</p>
+		</div>
+		<div class="glass left" style="width: 40%; position: sticky; top: 100px;">
+			<img class="mejpeg left" src="3polarisers.gif">
+		</div>
+	</div>
+
+	<div class="line">
+	</div>
+
+	<div class="box onscroll" id="paradoxe">
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>L'explication</h2>
+			</div>
+		</center>
+		<div class="glass content right">
+			<p>Le paradoxe des trois polariseurs pourrait paraître très étrange mais c'est en fait assez
+				simple à expliquer.</p>
+			<div class="mathjax">
+				\( \theta_1 = 0 \), c'est l'angle du premier polariseur. <br>
+				\( \theta_2 \), est l'angle du deuxième polariseur, c'est celui qui sera variable. <br>
+				\( \theta_3 = \pi/2 \), c'est l'angle du dernier polariseur qui est perpendiculaire au
+				premier. <br>
+				\( I_0 = 1 \), c'est l'intensité initiale.<br>
+				\( I_1 = 1/2 \), c'est l'intensité après avoir passé le premier polariseur.<br>
+				\( I_2 = I_1 \cos^2(\theta_2) \), c'est l'intensité après avoir passé le deuxième
+				polariseur.<br>
+				\( I_3 = I_2 \cos^2(|\theta_3 - \theta_2|) \), c'est l'intensité après avoir passé le
+				troisième polariseur.<br>
+			</div>
+			<p> On peut déjà commencer à voir que la troisième intensité est lié à l'angle du deuxième est
+				que cette liaison ne peut pas s'enlever avec des simplifications.</p>
+			<div class="mathjax">
+				On peut établir une fonction \( I_3(\theta_2, \theta_3, I_1) \), mais cela se résume à
+				\( I_3(\theta_2) \) car les autres variables sont constantes.<br>
+				\( \therefore I_3(\theta_2) = I_2(\theta_2) \cos^2(|\theta_3 - \theta_2|) \) <br>
+				\( \iff I_3(\theta_2) = I_1 \cos^2(\theta_2) \cos^2(|\theta_3 - \theta_2|) \) <br>
+				\( \iff I_3(\theta_2) = \frac{1}{2} \cdot \cos^2(\theta_2) \cos^2(|\pi/2 - \theta_2|) \)
+				<br>
+			</div>
+			<p> On peut donc voir que cette fonction n'est pas une fonction constante à 0, mais elle varie.
+				Cela nous montre donc que ajouter un autre polariseur intermédiaire peut augmenter
+				l'intensité de la lumiére. Deux polariseurs tournés d'un angle de &#120761;/4 font
+				laisser
+				passer la lumiére, donc si cela est
+				l'angle du deuxième polariseur, alors il laissera passer une peu de lumière et le
+				troisième fera
+				de même, car il a cet angle-ci par rapport au deuxième polariseur de qui il reçoit la
+				lumière.
+				Donc à la fin, les trois polariseurs laissent passer certaine quantité de lumière alors
+				qu'avec
+				deux polariseurs, aucune lumière ne parvient à passer.<br>
+				On pourrait même aller un peu plus loin en essayant de trouver l'angle optimal en
+				dérivant la fonction:
+			</p>
+			<div class="mathjax" style="width: 100%;">
+				Cela donne donc, <br>
+				\( \frac{dI_3}{d\theta_2} = \frac{d}{d\theta_2}(\frac{1}{2} \cdot \cos^2(\theta_2)
+				\cos^2(|\pi/2 - \theta_2)) \)<br>
+				\( = \frac{1}{2}(\frac{d}{d\theta_2}(\cos^2(\theta_2) \sin^2(\theta_2))) \) pour \(
+				\theta_2 \in [0, \pi/2] \) <br>
+				\( = \frac{1}{2}(\frac{d}{d\theta_2}(\cos^2(\theta_2)) \sin^2(\theta_2) +
+				\frac{d}{d\theta_2}(\sin^2(\theta_2)\cos^2(\theta_2))) \)<br>
+				\( = \frac{1}{2}(-\sin(2\theta_2)\sin^2(\theta_2) + \sin(2\theta_2)\cos^2(\theta_2))
+				\)<br>
+				\( = \frac{1}{2}(\sin(2\theta_2)(\cos^2(\theta_2) - \sin^2(\theta_2))) \) <br>
+				\( = \frac{\sin(2x)\cos(2x)}{2} \) <br>
+				Pour le maximum, il faut donc resoudre l'equation:<br>
+				\( (\frac{dI_3}{d\theta_2})_x = 0 \)
+			</div>
+		</div>
+		<div class="glass left" style="width: 40%; position: sticky; top: 100px;">
+			<img class="mejpeg left" src="simulation.gif">
+		</div>
 	</div>
 
 	<script src="../script.js">
