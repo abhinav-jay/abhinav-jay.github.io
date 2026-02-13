@@ -43,6 +43,7 @@
 		<button><a href="#paradoxe">Le paradoxe des trois polariseurs</a></button>
 		<button><a href="#explication">L'explication</a></button>
 		<button><a href="#biologie">Lien vers la biologie</a></button>
+		<button><a> * Tous les angles sont en radians</a></button>
 		<a href="mailto:abhinav.in.mail@gmail.com" target="_blank" class="active">
 			<button class="activebutton">
 				Contact
@@ -120,7 +121,7 @@
 	<div class="line">
 	</div>
 
-	<div class="box onscroll" id="paradoxe">
+	<div class="box onscroll" id="explication">
 		<center>
 			<div class="text" style="text-align: center;">
 				<h2>L'explication</h2>
@@ -179,7 +180,15 @@
 				\( = \frac{1}{2}(\sin(2\theta_2)(\cos^2(\theta_2) - \sin^2(\theta_2))) \) <br>
 				\( = \frac{\sin(2x)\cos(2x)}{2} \) <br>
 				Pour le maximum, il faut donc resoudre l'equation:<br>
-				\( (\frac{dI_3}{d\theta_2})_x = 0 \)
+				\( (\frac{dI_3}{d\theta_2})_x = 0 \)<br>
+				Ce qui revient à faire <br>
+				\( \sin(2x)\cos(2x) = 0 \) dans \( [0, \pi/2] \)<br>
+				\( \iff x = \frac{\cos^{-1}(0)}{2} \)<br>
+				\( \iff x = \pi/4 \)<br>
+				Donc le meilleur angle pour placer un polariseur entre deux polariseurs écartés de \(
+				\pi/2 \) est de mettre un au milieu dans un angle de \( \pi/4 \), ce qui semble assez
+				logique comme résultat.
+
 			</div>
 		</div>
 		<div class="glass left" style="width: 40%; position: sticky; top: 100px;">

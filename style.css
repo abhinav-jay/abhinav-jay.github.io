@@ -389,12 +389,14 @@ li {
 		text-align: left;
 		padding: 5px;
 		position: relative;
+		top: 0;
 	}
 
 	.content {
 		padding: 2px;
 		width: auto;
 		position: relative;
+		top: 0;
 	}
 
 	.right {
