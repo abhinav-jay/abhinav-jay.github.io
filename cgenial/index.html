@@ -3,6 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../style.css">
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 	<title>Concours Cgénial - Filtrer pour mieux transmettre</title>
@@ -12,6 +14,10 @@
 			margin-top: 20px;
 			margin-bottom: 20px;
 			text-align: center;
+		}
+
+		p {
+			text-indent: 30px;
 		}
 	</style>
 </head>
@@ -140,7 +146,7 @@
 				\( I_1 = 1/2 \), c'est l'intensité après avoir passé le premier polariseur.<br>
 				\( I_2 = I_1 \cos^2(\theta_2) \), c'est l'intensité après avoir passé le deuxième
 				polariseur.<br>
-				\( I_3 = I_2 \cos^2(|\theta_3 - \theta_2|) \), c'est l'intensité après avoir passé le
+				\( I_3 = I_2 \cos^2(\theta_3 - \theta_2) \), c'est l'intensité après avoir passé le
 				troisième polariseur.<br>
 			</div>
 			<p> On peut déjà commencer à voir que la troisième intensité est lié à l'angle du deuxième est
@@ -148,9 +154,9 @@
 			<div class="mathjax">
 				On peut établir une fonction \( I_3(\theta_2, \theta_3, I_1) \), mais cela se résume à
 				\( I_3(\theta_2) \) car les autres variables sont constantes.<br>
-				\( \therefore I_3(\theta_2) = I_2(\theta_2) \cos^2(|\theta_3 - \theta_2|) \) <br>
-				\( \iff I_3(\theta_2) = I_1 \cos^2(\theta_2) \cos^2(|\theta_3 - \theta_2|) \) <br>
-				\( \iff I_3(\theta_2) = \frac{1}{2} \cdot \cos^2(\theta_2) \cos^2(|\pi/2 - \theta_2|) \)
+				\( \therefore I_3(\theta_2) = I_2(\theta_2) \cos^2(\theta_3 - \theta_2) \) <br>
+				\( \iff I_3(\theta_2) = I_1 \cos^2(\theta_2) \cos^2(\theta_3 - \theta_2) \) <br>
+				\( \iff I_3(\theta_2) = \frac{1}{2} \cdot \cos^2(\theta_2) \cos^2(\pi/2 - \theta_2) \)
 				<br>
 			</div>
 			<p> On peut donc voir que cette fonction n'est pas une fonction constante à 0, mais elle varie.
@@ -171,7 +177,7 @@
 			<div class="mathjax" style="width: 100%;">
 				Cela donne donc, <br>
 				\( \frac{dI_3}{d\theta_2} = \frac{d}{d\theta_2}(\frac{1}{2} \cdot \cos^2(\theta_2)
-				\cos^2(|\pi/2 - \theta_2)) \)<br>
+				\cos^2(\pi/2 - \theta_2)) \)<br>
 				\( = \frac{1}{2}(\frac{d}{d\theta_2}(\cos^2(\theta_2) \sin^2(\theta_2))) \) pour \(
 				\theta_2 \in [0, \pi/2] \) <br>
 				\( = \frac{1}{2}(\frac{d}{d\theta_2}(\cos^2(\theta_2)) \sin^2(\theta_2) +
@@ -191,6 +197,9 @@
 				logique comme résultat.
 
 			</div>
+			<p> Le code de la simulation montré dans la vidéo est disponible <a
+					href="https://github.com/abhinav-jay/cgenial_simulation" target="_blank"
+					class="a">ici.</a>
 		</div>
 		<div class="glass left" style="width: 40%; position: sticky; top: 100px;">
 			<img class="mejpeg left" src="simulation.gif">
