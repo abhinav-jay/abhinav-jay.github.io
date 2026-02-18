@@ -15,10 +15,53 @@
 			margin-top: 20px;
 			margin-bottom: 20px;
 			text-align: center;
+			width: 100%;
 		}
 
 		p {
 			text-indent: 30px;
+		}
+
+		.links {
+			list-style-type: none;
+		}
+
+		.medium {
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 50, 0, 0.7);
+			border: 1px solid rgb(200, 100, 0)
+		}
+
+		.hard {
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 0, 0, 0.7);
+			border: 1px solid rgb(200, 0, 0)
+		}
+
+		.easy {
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(0, 100, 0, 0.7);
+			border: 1px solid rgb(0, 200, 0)
+		}
+
+		.gap {
+			padding: 3px;
+			display: block;
 		}
 	</style>
 </head>
@@ -50,8 +93,9 @@
 		<button><a href="#polariseur">Qu'est-ce qu'un polariseur?</a></button>
 		<button><a href="#paradoxe">Le paradoxe des trois polariseurs</a></button>
 		<button><a href="#explication">L'explication</a></button>
-		<button><a href="#svt">Lien vers la SVT</a></button>
+		<button><a href="#svt">Lien avec la SVT</a></button>
 		<button><a href="#radian"> * Tous les angles sont en radians</a></button>
+		<button><a href="#avance">Ressources</a></button>
 		<a href="mailto:abhinav.in.mail@gmail.com" target="_blank" class="active">
 			<button class="activebutton">
 				Contact
@@ -216,7 +260,8 @@
 			</div>
 		</center>
 		<div class="glass content right">
-			<p> Lien vers la SVT, cette partie est en cours de développement mais sera bientôt disponible si
+			<p> Lien vers la SVT, cette partie est en cours de développement mais sera bientôt
+				disponible si
 				tout se passe normalement.</p>
 		</div>
 		<div class="glass left" style="width: 40%; position: sticky; top: 100px;">
@@ -233,9 +278,12 @@
 			</div>
 		</center>
 		<div class="glass content right">
-			<p>Les radians sont une façon très utile de mesurer un angle. La valeur d'un angle en radians
-				est égal a la longeur de l'arc de cercle formé par cet angle sur un cercle de rayon 1.
-				<a class="a" href="https://fr.wikipedia.org/wiki/Radian" target="_blank">Pour en savoir
+			<p>Les radians sont une façon très utile de mesurer un angle. La valeur d'un angle en
+				radians
+				est égal a la longeur de l'arc de cercle formé par cet angle sur un cercle de
+				rayon 1.
+				<a class="a" href="https://fr.wikipedia.org/wiki/Radian" target="_blank">Pour en
+					savoir
 					plus.</a>
 			</p>
 		</div>
@@ -243,6 +291,37 @@
 			<img class="mejpeg left" src="radian.png" alt="image en rapport avec les radians">
 		</div>
 	</div>
+
+	<div class="line"></div>
+
+	<div class="box onscroll" id="avance" style="width: 90%;">
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>Ressources</h2>
+			</div>
+		</center>
+		<div class="glass content right">
+			<p> Ressources: </p>
+			<!-- <div class="gap"> -->
+			<!-- 	<li class="links"><a target="_blank" href="maxwell.pdf" class="hard">Dérivation de la -->
+			<!-- 			direction du champ éléctrique</a></li> -->
+			<!-- </div> -->
+			<div class="gap">
+				<li class="links"><a target="_blank" href="infini_polariseurs.pdf" class="easy">Le cas
+						d'une
+						infinité de polariseurs</a></li>
+			</div>
+			<div class="gap">
+				<li class="links"><a target="_blank" href="matrix.pdf" class="medium">Les
+						matrices de rotation dans le cas continu
+					</a></li>
+			</div>
+		</div>
+		<div class="glass left" style="width: 40%; position: sticky; top: 100px;">
+			<img class="mejpeg left" src="electricity.png">
+		</div>
+	</div>
+
 
 	<script src="../script.js">
 	</script>
