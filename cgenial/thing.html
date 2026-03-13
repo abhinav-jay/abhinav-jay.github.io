@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
+	<link rel="stylesheet" href="../style.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+	<title>Infini polariseurs</title>
+	<style>
+		.mathjax {
+			font-size: 25px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+			width: 100%;
+		}
+
+		p {
+			text-indent: 30px;
+		}
+
+		.links {
+			list-style-type: none;
+		}
+
+		.medium {
+			margin: 10px;
+			display: flex;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 50, 0, 0.7);
+			border: 1px solid rgb(200, 100, 0)
+		}
+
+		.hard {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 0, 0, 0.7);
+			border: 1px solid rgb(200, 0, 0)
+		}
+
+		.easy {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(0, 100, 0, 0.7);
+			border: 1px solid rgb(0, 200, 0)
+		}
+
+		.gap {
+			padding: 3px;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="topnav" id="myTopnav">
+		<button class="icon activebutton" onclick="myFunction()">
+			<div class="menubtn">
+				&#8801;
+			</div>
+		</button>
+		<a target="_blank" href="https://www.cgenial.org/82-nos-actions/145-concours-cgenial" class="name">
+			<button class="activebutton" style="padding: 10px;">
+				<img src="concours_cgenial_logo.png" style="width:100px;height:27px;"
+					alt="Abhinav Jayesh">
+			</button class="activebutton">
+		</a>
+		<button id="light" onclick="dark()">
+			<a class="theme" id="light">
+				<i style="font-size: 20px;" class="fa fa-sun-o"></i>
+			</a>
+		</button>
+		<button id="dark" class="theme" onclick="dark()">
+			<a class="theme" id="dark">
+				<i class="fa fa-moon-o" style="font-size: 20px;"></i>
+			</a>
+		</button>
+		<button><a href="index.html">Page d'acceuil</a></button>
+		<a href="mailto:abhinav.in.mail@gmail.com" target="_blank" class="active">
+			<button class="activebutton">
+				Contact
+				<div class="arrow-wrapper">
+					<div class="arrow"></div>
+
+				</div>
+			</button>
+		</a>
+	</div>
+
+	<div class="box onscroll" id="paradoxe">
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>Le cas d'une infinité de polariseurs</h2>
+			</div>
+		</center>
+		<center>
+			<div class="mathjax" style="text-align: center; width: 70%; margin: auto;">
+
+				On considère deux polariseurs, un orienté à 0 et l'autre à un angle de \(\pi/2\). Entre
+				ces deux polariseurs, on va considérer \(N\) polariseurs, tous avec un angle
+				\(\theta_i\). On définit \(\Delta\theta_i = \theta_i - \theta_{i-1}\).<br>
+
+				D'après la loi de Malus, l'intensité que la lumière polarisée aura après avoir passé un
+				autre polariseur avec une différence d'angle de \(\Delta\theta\), sera :
+				\[
+				I = I_0 \cos^2(\Delta\theta)
+				\]
+
+				Ce résultat peut être très simplement modifié pour trouver l'intensité finale après
+				avoir traversé plusieurs polariseurs avec des différences d'angle \(\Delta\theta_i\).
+				Cela nous donnera :
+				\[
+				I = I_0 \prod_{i = 1}^{N} \cos^2(\Delta\theta_i)
+				\]
+
+				Considérons que \(\Delta\theta\) est constant, cela nous laisse donc avec :
+				\[
+				\Delta\theta = \frac{\pi}{2} \cdot \frac{1}{N}
+				\]
+				\[
+				\iff \Delta\theta = \frac{\pi}{2N}
+				\]
+				\[
+				\implies I_N = I_0 \cos^{2N}\left(\frac{\pi}{2N}\right)
+				\]
+
+				Désormais, nous allons considérer que \(N\) est un grand nombre (à la fin nous prendrons
+				une limite avec \(N \to \infty\) pour voir ce que cela fait).
+				Pour un petit angle, \(\cos(x) = 1 - \frac{x^2}{2}\) d'après le développement limité de
+				rang 2. Et dans notre cas, l'angle est \(\frac{\pi}{2N}\), ce qui sera très petit car
+				\(N\) est très grand.
+
+				\[
+				\cos^2(x) = \left(1 - \frac{x^2}{2}\right)^2 = 1 - x^2 + \frac{x^4}{4} \approx 1 - x^2
+				\]
+
+				\[
+				\implies \cos^2\left(\frac{\pi}{2N}\right) \approx 1 - \frac{\pi^2}{4N^2}
+				\]
+
+				\[
+				\implies I_N = I_0 \left(1 - \frac{\pi^2}{4N^2}\right)^N
+				\]
+
+				\[
+				\iff \lim_{N \to \infty} I_N = I_0 \, e^{-\frac{\pi^2}{4N}} = I_0
+				\]
+
+				Cela veut dire qu'avec une infinité de polariseurs, on peut faire passer toute la
+				lumière d'un polariseur à l'autre même si leur différence d'angle est \(\pi/2\).
+
+				On peut aussi voir que cette intensité finale est de la forme \(e^{-1/x}\), ce qui veut
+				dire que cette intensité augmente assez rapidement avec le nombre de polariseurs à
+				disposition. Mais par contre, si \(N\) est le nombre de polariseurs, alors
+				\(\frac{d^2I}{dN^2} < 0\), ce qui veut dire que par exemple le centième polariseur ne
+					sera pas aussi utile que le dixième, même si cette fonction est croissante sur
+					\(\mathbf{R}_+\). Cela peut donc être très utile pour transférer de la lumière
+					polarisée dans une direction à une autre sans perdre beaucoup d'intensité
+					lumineuse. </div>
+			</div>
+		</center>
+		<script src="../script.js">
+		</script>
+</body>
+
+</html>

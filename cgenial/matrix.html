@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
+	<link rel="stylesheet" href="../style.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+	<title>Les matrices de rotation et le cas continu</title>
+	<style>
+		.mathjax {
+			font-size: 25px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+			width: 100%;
+		}
+
+		p {
+			text-indent: 30px;
+		}
+
+		.links {
+			list-style-type: none;
+		}
+
+		.medium {
+			margin: 10px;
+			display: flex;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 50, 0, 0.7);
+			border: 1px solid rgb(200, 100, 0)
+		}
+
+		.hard {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 0, 0, 0.7);
+			border: 1px solid rgb(200, 0, 0)
+		}
+
+		.easy {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(0, 100, 0, 0.7);
+			border: 1px solid rgb(0, 200, 0)
+		}
+
+		.gap {
+			padding: 3px;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="topnav" id="myTopnav">
+		<button class="icon activebutton" onclick="myFunction()">
+			<div class="menubtn">
+				&#8801;
+			</div>
+		</button>
+		<a target="_blank" href="https://www.cgenial.org/82-nos-actions/145-concours-cgenial" class="name">
+			<button class="activebutton" style="padding: 10px;">
+				<img src="concours_cgenial_logo.png" style="width:100px;height:27px;"
+					alt="Abhinav Jayesh">
+			</button class="activebutton">
+		</a>
+		<button id="light" onclick="dark()">
+			<a class="theme" id="light">
+				<i style="font-size: 20px;" class="fa fa-sun-o"></i>
+			</a>
+		</button>
+		<button id="dark" class="theme" onclick="dark()">
+			<a class="theme" id="dark">
+				<i class="fa fa-moon-o" style="font-size: 20px;"></i>
+			</a>
+		</button>
+		<button><a href="index.html">Page d'acceuil</a></button>
+		<a href="mailto:abhinav.in.mail@gmail.com" target="_blank" class="active">
+			<button class="activebutton">
+				Contact
+				<div class="arrow-wrapper">
+					<div class="arrow"></div>
+
+				</div>
+			</button>
+		</a>
+	</div>
+
+	<div class="box onscroll" id="paradoxe">
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>Matrices de rotation</h2>
+			</div>
+		</center>
+		<center>
+			<div class="mathjax" style="text-align: center; width: 70%; margin: auto;">
+				Dans ce papier, l'attention sera essentiellement tournée vers les matrices et la matrice
+				de rotation dans le cas continu.<br>
+				Soit \( \ket{\psi} \), le vecteur de Jones représentant la direction du champ
+				électrique.
+
+				Soit \( R(\theta) \), la matrice de rotation du champ électrique pour la polarisation
+				linéaire.
+				Cette matrice peut être écrite comme :
+				\[
+				R(\theta) =
+				\begin{pmatrix}
+				\cos(\theta) & \frac{d}{d\theta}\cos(\theta) \\
+				\sin(\theta) & \frac{d}{d\theta}\sin(\theta)
+				\end{pmatrix}
+				=
+				\begin{pmatrix}
+				\cos(\theta) & -\sin(\theta) \\
+				\sin(\theta) & \cos(\theta)
+				\end{pmatrix}
+				\]
+
+				Nous allons maintenant prendre une valeur \( d\theta \to 0 \).
+				\[
+				R(d\theta) =
+				\begin{pmatrix}
+				\cos(d\theta) & -\sin(d\theta) \\
+				\sin(d\theta) & \cos(d\theta)
+				\end{pmatrix}
+				=_{d\theta \to 0}
+				\begin{pmatrix}
+				1 & -d\theta \\
+				d\theta & 1
+				\end{pmatrix}
+				=
+				\begin{pmatrix}
+				0 & -d\theta \\
+				d\theta & 0
+				\end{pmatrix}
+				+ I
+				\]
+				\[
+				R(d\theta) = d\theta
+				\begin{pmatrix}
+				0 & -1 \\
+				1 & 0
+				\end{pmatrix}
+				+ I
+				= d\theta J + I
+				\]
+
+				On remarque que \( J^2 = -I \), ou plus généralement que :
+				\[
+				J^n =
+				\left\{
+				\begin{array}{ll}
+				I & \quad n \equiv 0 \pmod{4} \\
+				J & \quad n \equiv 1 \pmod{4} \\
+				-I & \quad n \equiv 2 \pmod{4} \\
+				-J & \quad n \equiv 3 \pmod{4}
+				\end{array}
+				\right.
+				\]
+
+				\( d\theta \) est une partie infiniment petite de \( \theta \), donc :
+				\[
+				\lim_{N \to \infty} \lim_{d\theta \to 0} R(d\theta)^N = R(\theta)
+				\]
+				\[
+				R(d\theta)^N = (J\theta + I)^N = e^{J\theta}
+				\]
+
+				Donc, la matrice de rotation continue se traduit comme une exponentielle de matrice.
+				Avec les séries de Taylor, cette exponentielle s'écrit comme :
+				\[
+				\sum_{n = 0}^{\infty} \frac{J^n \theta^n}{n!} = I + J\theta - I \frac{\theta^2}{2!} - J
+				\frac{\theta^3}{3!} + I \frac{\theta^4}{4!} + \dots
+				\]
+				\[
+				\sum_{n = 0}^{\infty} \frac{J^n \theta^n}{n!} = I \sum_{n = 0}^{\infty} \frac{(-1)^n
+				\theta^{2n}}{(2n)!} + J \sum_{n = 0}^{\infty} \frac{(-1)^n \theta^{2n+1}}{(2n+1)!}
+				\]
+
+				On peut reconnaître les séries de Taylor pour \(\sin\) et \(\cos\).
+				Donc cela nous amène à la formule d'Euler pour les matrices :
+				\[
+				e^{J\theta} = I \cos(\theta) + J \sin(\theta)
+				\]
+
+				Nous pouvons de cette manière exprimer la rotation totale que subit la lumière lorsqu'il
+				y a des polariseurs en continu avec des fonctions trigonométriques.
+
+			</div>
+	</div>
+	</center>
+	<script src="../script.js">
+	</script>
+</body>
+
+</html>

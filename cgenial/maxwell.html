@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
+	<link rel="stylesheet" href="../style.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+	<title>Dérivation du vecteur de Jones</title>
+	<style>
+		.mathjax {
+			font-size: 25px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+			width: 100%;
+		}
+
+		p {
+			text-indent: 30px;
+		}
+
+		.links {
+			list-style-type: none;
+		}
+
+		.medium {
+			margin: 10px;
+			display: flex;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 50, 0, 0.7);
+			border: 1px solid rgb(200, 100, 0)
+		}
+
+		.hard {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 0, 0, 0.7);
+			border: 1px solid rgb(200, 0, 0)
+		}
+
+		.easy {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(0, 100, 0, 0.7);
+			border: 1px solid rgb(0, 200, 0)
+		}
+
+		.gap {
+			padding: 3px;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="topnav" id="myTopnav">
+		<button class="icon activebutton" onclick="myFunction()">
+			<div class="menubtn">
+				&#8801;
+			</div>
+		</button>
+		<a target="_blank" href="https://www.cgenial.org/82-nos-actions/145-concours-cgenial" class="name">
+			<button class="activebutton" style="padding: 10px;">
+				<img src="concours_cgenial_logo.png" style="width:100px;height:27px;"
+					alt="Abhinav Jayesh">
+			</button class="activebutton">
+		</a>
+		<button id="light" onclick="dark()">
+			<a class="theme" id="light">
+				<i style="font-size: 20px;" class="fa fa-sun-o"></i>
+			</a>
+		</button>
+		<button id="dark" class="theme" onclick="dark()">
+			<a class="theme" id="dark">
+				<i class="fa fa-moon-o" style="font-size: 20px;"></i>
+			</a>
+		</button>
+		<button><a href="index.html">Page d'acceuil</a></button>
+		<a href="mailto:abhinav.in.mail@gmail.com" target="_blank" class="active">
+			<button class="activebutton">
+				Contact
+				<div class="arrow-wrapper">
+					<div class="arrow"></div>
+
+				</div>
+			</button>
+		</a>
+	</div>
+
+	<div class="box onscroll" id="paradoxe">
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>Dérivation de la loi de Malus</h2>
+			</div>
+		</center>
+		<center>
+			<div class="mathjax" style="text-align: center; width: 70%; margin: auto;">
+				Dans cette partie, nous allons utiliser une solution aux équations de Maxwell qui va
+				être très importante.<br>
+				Un rappel sur les équations de Maxwell :<br>
+
+				Loi de Gauss pour l'électricité :
+				\[
+				\nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0}
+				\]
+
+				Loi de Gauss pour le magnétisme :
+				\[
+				\nabla \cdot \vec{B} = 0
+				\]
+
+				Loi de Faraday pour l'induction :
+				\[
+				\nabla \times \vec{E} = -\frac{\partial\vec{B}}{\partial t}
+				\]
+
+				Loi d'Ampère-Maxwell :
+				\[
+				\nabla \times \vec{B} = \mu_0 J + \epsilon_0 \mu_0 \frac{\partial\vec{E}}{\partial t}
+				\]
+
+				Une solution très utile pour ces équations est la suivante :
+				\[
+				\vec{E} = e^{i(kz-\omega t)}(E_x \hat{i} + E_y \hat{j})
+				\]
+				\[
+				\vec{B} = \frac{1}{\omega} \hat{k} \times \vec{E}
+				\]
+
+				\( V \) est le potentiel électrique défini comme étant :
+				\[
+				\vec{E} = - \nabla V = \Big(-\frac{\partial V}{\partial x},-\frac{\partial V}{\partial
+				y},-\frac{\partial V}{\partial z}\Big)
+				\]
+
+				Le curl \( \nabla \times \vec{F} \) d'un champ vectoriel est défini comme :
+				\[
+				\nabla \times \vec{F} =
+				\begin{vmatrix}
+				\hat{i} & \hat{j} & \hat{k} \\
+				\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}
+				\\
+				F_x & F_y & F_z
+				\end{vmatrix}
+				\]
+
+				Pour trouver le vecteur de Jones, nous allons d'abord voir de quels composants est
+				véritablement composé le champ électrique, ensuite nous allons trouver exactement les
+				facteurs dans chaque direction :
+				\[
+				\vec{E} = E_x \hat{i} e^{i(kz-\omega t)} + E_y \hat{j} e^{i(kz-\omega t)}
+				\]
+				\[
+				\vec{B} = \frac{1}{\omega}\,\hat{k} \times \vec{E}
+				\]
+
+				On calcule :
+				\[
+				\nabla \times \vec{E} =
+				\begin{vmatrix}
+				\hat{i} & \hat{j} & \hat{k} \\
+				\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}
+				\\
+				E_x & E_y & E_z
+				\end{vmatrix}
+				\]
+				\[
+				\iff \nabla \times \vec{E} =
+				\begin{vmatrix}
+				\hat{i} & \hat{j} & \hat{k} \\
+				\frac{\partial E}{\partial x} & \frac{\partial E}{\partial y} & \frac{\partial
+				E}{\partial z} \\
+				\frac{\partial V}{\partial x} & \frac{\partial V}{\partial y} & \frac{\partial
+				V}{\partial z} \\
+				\end{vmatrix}
+				\]
+				\[
+				\iff \nabla \times \vec{E} = \hat{i}\Big(\frac{\partial}{\partial y} \cdot
+				-\frac{\partial V}{\partial z} - \frac{\partial}{\partial z} \cdot -\frac{\partial
+				V}{\partial y}\Big)
+				- \hat{j}\Big(\frac{\partial}{\partial x} \cdot -\frac{\partial V}{\partial z} -
+				\frac{\partial}{\partial z} \cdot -\frac{\partial V}{\partial x}\Big)
+				+ \hat{k}\Big(\frac{\partial}{\partial x} \cdot -\frac{\partial V}{\partial y} -
+				\frac{\partial}{\partial y} \cdot -\frac{\partial V}{\partial x}\Big)
+				\]
+
+				\[
+				E_z = 0 \therefore \frac{\partial}{\partial z} = \frac{\partial V}{\partial z} = 0
+				\]
+
+				\[
+				\therefore \nabla \times \vec{E} = \hat{i}(0+0) - \hat{j}(0+0)
+				+ \hat{k}\Big(\frac{\partial}{\partial x} \cdot -\frac{\partial V}{\partial y} -
+				\frac{\partial}{\partial y} \cdot -\frac{\partial V}{\partial x}\Big)
+				\]
+				\[
+				\iff \nabla \times \vec{E} = \hat{k}\Big(\frac{\partial}{\partial x} \cdot
+				-\frac{\partial V}{\partial y} - \frac{\partial}{\partial y} \cdot -\frac{\partial
+				V}{\partial x}\Big)
+				\]
+
+				\[
+				\therefore \nabla \times \vec{E} \perp \vec{E}
+				\]
+
+				Avec la projection de \( E_x \) et de \( E_y \), on peut donc trouver que :
+				\[
+				E = E_0 \cos(\theta) \hat{i} e^{i(kz-\omega t)} + E_0 \sin(\theta) \hat{j}
+				e^{i(kz-\omega t)}
+				\]
+				\[
+				\iff E = E_0 (\cos(\theta)\hat{i} + \sin(\theta)\hat{j}) e^{i(kz-\omega t)}
+				\]
+				\[
+				\iff E = E_0 e^{i(kz-\omega t)} \ket{\psi}
+				\]
+				\[
+				\iff \ket{\psi} = \begin{pmatrix} \cos(\theta) \\ \sin(\theta) \end{pmatrix}
+				\]
+
+				\(\ket{\psi}\) est donc le vecteur de Jones représentant la direction du champ
+				électrique dans
+				une polarisation linéaire. Il est composé seulement de \( \hat{i} \) et de \( \hat{j}
+				\),
+				mais pas de \( \hat{k} \), car il est perpendiculaire à \( \nabla \times \vec{E} \) qui
+				est composé
+				seulement de \( \hat{k} \).
+			</div>
+	</div>
+	</center>
+	<script src="../script.js">
+	</script>
+</body>
+
+</html>

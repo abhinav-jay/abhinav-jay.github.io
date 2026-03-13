@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
+	<link rel="stylesheet" href="../style.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+	<title>Dérivation formelle</title>
+	<style>
+		.mathjax {
+			font-size: 25px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+			width: 100%;
+		}
+
+		p {
+			text-indent: 30px;
+		}
+
+		.links {
+			list-style-type: none;
+		}
+
+		.medium {
+			margin: 10px;
+			display: flex;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 50, 0, 0.7);
+			border: 1px solid rgb(200, 100, 0)
+		}
+
+		.hard {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 0, 0, 0.7);
+			border: 1px solid rgb(200, 0, 0)
+		}
+
+		.easy {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(0, 100, 0, 0.7);
+			border: 1px solid rgb(0, 200, 0)
+		}
+
+		.gap {
+			padding: 3px;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="topnav" id="myTopnav">
+		<button class="icon activebutton" onclick="myFunction()">
+			<div class="menubtn">
+				&#8801;
+			</div>
+		</button>
+		<a target="_blank" href="https://www.cgenial.org/82-nos-actions/145-concours-cgenial" class="name">
+			<button class="activebutton" style="padding: 10px;">
+				<img src="concours_cgenial_logo.png" style="width:100px;height:27px;"
+					alt="Abhinav Jayesh">
+			</button class="activebutton">
+		</a>
+		<button id="light" onclick="dark()">
+			<a class="theme" id="light">
+				<i style="font-size: 20px;" class="fa fa-sun-o"></i>
+			</a>
+		</button>
+		<button id="dark" class="theme" onclick="dark()">
+			<a class="theme" id="dark">
+				<i class="fa fa-moon-o" style="font-size: 20px;"></i>
+			</a>
+		</button>
+		<button><a href="index.html">Page d'acceuil</a></button>
+		<a href="mailto:abhinav.in.mail@gmail.com" target="_blank" class="active">
+			<button class="activebutton">
+				Contact
+				<div class="arrow-wrapper">
+					<div class="arrow"></div>
+
+				</div>
+			</button>
+		</a>
+	</div>
+
+	<div class="box onscroll" id="paradoxe">
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>Dérivation de la loi de Malus</h2>
+			</div>
+		</center>
+		<center>
+			<div class="mathjax" style="text-align: center; width: 70%; margin: auto;">
+
+				Dans ce papier, nous allons dériver la loi de Malus à partir du vecteur de Jones pour la
+				polarisation linéaire d'une façon assez formelle. Si vous voulez une façon moins
+				formelle de le faire, il y a aussi un papier avec cela.
+
+				Une chose très importante : l'intensité à laquelle la lumière passe peut être dite par
+				<br>
+				(Probabilité que chaque photon passe) \( \times \) (Intensité initiale de la lumière).
+
+				L'état du champ électrique est compris dans le champ vectoriel \( \vec{E}(x, y, z) = E_0
+				e^{i(kz- \omega t)} \ket{\psi} \).
+
+				En mécanique quantique, l'amplitude que quelque chose dans un état \( \ket{\psi} \) soit
+				mesuré dans un autre état \( \ket{\phi} \) est donnée par leur produit intérieur. $$
+				\langle \phi \ket{\psi} = \int_{\mathbb{R}} \phi^{*} \psi \hspace{1mm} dx $$
+
+				\( u(x, y) \) est une fonction pour normaliser la taille de ce vecteur à 1, telle que :
+				$$ \int_{\mathbb{R}^2} |u(x, y)|^2 \hspace{1mm} dx \hspace{1mm} dy = 1 $$
+				Nous faisons cela pour normaliser les vecteurs et pour qu'à la fin le produit intérieur
+				ne diverge pas. Plus formellement, cela nous permet de garder le produit intérieur dans
+				\( L^2(\mathbb{C}^2) \), car c'est un espace de Hilbert.
+
+				Nous nous positionnons ici dans le plan x-y, pas seulement dans une dimension x, donc
+				l'intégrale sera sur \( \mathbb{R}^2 \) et sur dx dy, pas seulement sur dx. Ici, on doit
+				donc calculer l'amplitude que le champ électrique dans l'état \( \vec{E} \) soit égal à
+				la
+				direction de la polarisation quand il est mesuré. On va ici prendre \( \hat{i} \) pour
+				la
+				direction de la polarisation. Donc ce qu'on doit calculer est :
+				$$ \langle u \ket{u} \cdot \langle \hat{i} \ket{\vec{E}} = \int_{\mathbb{R}^2}
+				\hat{i}^{*} \vec{E} \cdot u^{*}u \hspace{1mm} dx \hspace{1mm} dy $$
+				$$ \langle u \ket{u} \cdot \langle \hat{i} \ket{\vec{E}} = \int_{\mathbb{R}^2} \hat{i}
+				\cdot \psi E_0 e^{i(kz -\omega t)} u(x,y)^{*} u(x, y) \hspace{1mm} dx \hspace{1mm} dy $$
+				$$ \langle u \ket{u} \cdot \langle \hat{i} \ket{\vec{E}} = \int_{\mathbb{R}^2}
+				\begin{pmatrix} 1 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} \cos \theta \\ \sin \theta
+				\end{pmatrix} E_0 e^{i(kz -\omega t)} u(x,y)^{*} u(x, y) \hspace{1mm} dx \hspace{1mm} dy
+				$$
+				$$ \langle u \ket{u} \cdot \langle \hat{i} \ket{\vec{E}} = \begin{pmatrix} 1 \\ 0
+				\end{pmatrix} \cdot \begin{pmatrix} \cos \theta \\ \sin \theta \end{pmatrix} E_0 e^{i(kz
+				-\omega t)} \int_{\mathbb{R}^2} u(x,y)^{*} u(x, y) \hspace{1mm} dx \hspace{1mm} dy $$
+				$$ \langle u \ket{u} \cdot \langle \hat{i} \ket{\vec{E}} = \cos \theta E_0 e^{i(kz
+				-\omega t)} \int_{\mathbb{R}^2} |u(x,y)|^2 \hspace{1mm} dx \hspace{1mm} dy $$
+				$$ \langle u \ket{u} \cdot \langle \hat{i} \ket{\vec{E}} = \cos \theta E_0 e^{i(kz
+				-\omega t)} \cdot 1 $$
+				$$ \langle u \ket{u} \cdot \langle \hat{i} \ket{\vec{E}} = \cos \theta E_0 e^{i(kz
+				-\omega t)} $$
+
+				On peut aussi voir que :
+				$$ \ket{\psi} = \frac{\vec{E}}{E_0 e^{i(kz - \omega t)}} $$
+				$$ \implies \langle \hat{i} \ket{\psi} = \frac{\langle \hat{i} \ket{\vec{E}}}{E_0
+				e^{i(kz - \omega t)}} = \cos \theta $$
+
+				On sait que la probabilité de quelque chose est le module de l'amplitude au carré, donc
+				:
+				$$ P = |A|^2 $$
+				$$ \iff P = | \langle \hat{i} \ket{\vec{E}} |^2 $$
+				$$ \iff P = \cos^2 \theta $$
+
+				On sait que \( I = I_0 \times P \) .
+				Donc, on peut trouver que :
+				$$ I = I_0 \cos^2 \theta $$
+				C'est la loi de Malus, donc on a réussi à trouver la loi de Malus à partir du vecteur de
+				Jones.
+
+			</div>
+	</div>
+	</center>
+	<script src="../script.js">
+	</script>
+</body>
+
+</html>

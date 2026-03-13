@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+On considère deux polariseurs, un orienté a 0 et l'autre à un angle de $ \pi/2 $. Entre ces deux polariseurs, on va considérer N polariseurs, tous avec un angle $ \theta_i $. On definit $ \Delta\theta_i = \theta_i - \theta_{i-1} $.
+\newline
+
+D'apres la loi de Malus, l'intensité que la lumière polarisée aura après avoir passé un autre polarsieur avec une difference d'angle de $ \Delta\theta $, sera de $ I = I_0 \cos^2(\Delta\theta) $. Ce résultat peut être très simplement modifié pour trouver l'intensité finale apres avoir traversé plusieurs polariseurs aves des différences d'angle de $ \Delta\theta_i $. Cela nous donnera que:
+$$ I = I_0 \prod_{i = 1}^{N} \cos^2(\Delta\theta_i) $$
+considérons que $ \Delta\theta $ est constant, cela nous laisse donc avec:
+
+$$ \Delta\theta = \frac{\pi}{2} \cdot \frac{1}{N} $$
+$$ \iff \Delta\theta = \frac{\pi}{2N} $$
+$$ \implies I_N = I_0(\cos^2(\frac{\pi}{2N})) $$
+
+Depuis maintenant, nous allons considérer que N est un grand nombre (à la fin nous prendrons une limite avec N tend vers infini pour voir ce que cela fait)
+Pour un petit angle, $ \cos(x) = 1 - \frac{x^2}{2} $ d'après le développement limité de rang 2. Et dans notre cas, l'angle est de $ \frac{\pi}{2N} $ ce qui sera très petit car N est très grand.
+
+$$ \cos^2(x) = (1 - \frac{x^2}{2})^2 = 1 - x^2 + x^4/4 \approx 1 - x^2 $$
+$$ \implies \cos^2(\frac{\pi}{2N}) \approx 1 - \frac{\pi^2}{4N^2} $$
+$$ \implies I_N = I_0(1 - \frac{\pi^2}{4N^2})^N $$
+$$ \iff \lim_{N\to\infty} I_N = I_0 e^{-\frac{\pi^2}{4N}} = I_0 $$
+
+Cela veut dire qu'avec une infinité de polariseurs, on peut faire passer toute la lumière d'un polariseur à l'autre même si leur différence d'angle et de $ \pi/2 $. On peut aussi voir que cette intensité finale est de la forme $ e^{-1/x} $ ce qui veut dire que cette intensité augmente assez rapidement avec le nombre de polariseurs à disposition, mais par contre si N est le nombre de polariseurs, alors $ \frac{d^2I}{dN^2} < 0 $, cela veut dire que par exemple le centième polariseurs ne sera pas aussi utile que le dixième, même si cette fonction est croissante sur $ \mathbf{R}_+ $. Cela peut donc être très utile pour transéfer de la lumière polarisée dans une direction à une autre sans perdre beaucoup d'intensité lumineuse.
+
+\end{document}
