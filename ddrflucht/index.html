@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<title>Abhinav Jayesh's website</title>
+		<link rel="icon" type="image/x-icon" href="a.svg">
+	</head>
+
+	<body>
+		<div class="topnav" id="myTopnav">
+			<button class="icon activebutton" onclick="myFunction()">
+				<div class="menubtn">
+					&#8801;
+				</div>
+			</button>
+			<a href="#" class="name">
+				<button class="activebutton">
+					<img src="logo.svg" style="width:150px;height:17px;" alt="Flucht aus der DDR">
+				</button>
+			</a>
+			<button id="light" onclick="dark()">
+				<a class="theme" id="light">
+					<i style="font-size: 20px;" class="fa fa-sun-o"></i>
+				</a>
+			</button>
+			<button id="dark" class="theme" onclick="dark()">
+				<a class="theme" id="dark">
+					<i class="fa fa-moon-o" style="font-size: 20px;"></i>
+				</a>
+			</button>
+			<button><a href="#Text">Der Text</a></button>
+		</div>
+
+		<div class="box onscroll" id="first">
+			<div class="text left" id="name">
+				<h2>Gescheiterte Flucht in einer "trojanischer Kuh"</h2>
+			</div>
+			<div class="glass right">
+				<img alt="image von der Kuh" class="mejpeg right" src="kuh.jpg">
+			</div>
+		</div>
+		<div class="box onscroll" id="paradoxe">
+			<center>
+				<div class="text" style="text-align: center;">
+					<h2>Der Text der Flucht</h2>
+				</div>
+			</center>
+			<div class="glass content right">
+				<p>Zweimal schon hat eine „trojanische Kuh" Fluchtwillige in den Westen getragen. Doch beim dritten Versuch fliegt der Trick mit dem Ausstellungsobjekt auf. <br><br>
+					Am Abend des 7. Juli 1969 transportieren zwei Fluchthelfer den präparierten Bullen mit einem Klein-Lastwagen über die Transitautobahn Richtung West-Berlin. Unterwegs steigt eine 28-Jährige aus Karl-Marx-Stadt (Chemnitz) zu, die mit ihrem West-Berliner Verlobten im Westen zusammen leben will. Sie verbirgt sich in dem hohlen Tierkörper, der in einer Holzkiste steht. Für die Flucht hat der Verlobte 5.000 D-Mark angezahlt; gelingt das Vorhaben, ist der gleiche Betrag noch einmal fällig.<br><br>
+
+					Doch am DDR-Grenzübergang Drewitz wird das Versteck entdeckt, das Trio festgenommen und in die Potsdamer Stasi-Untersuchungshaftanstalt in der Lindenstraße verbracht.<br><br>
+
+					Die Fluchthelfer werden am 15. Oktober 1969 vom Bezirksgericht Potsdam „wegen staatsfeindlichen Menschenhandels" zu mehr als drei Jahren Gefängnis verurteilt, die 28-Jährige erhält wegen versuchten „ungesetzlichen Grenzübertritts" eine Haftstrafe von zwei Jahren und zehn Monaten. Von diesen 34 Monaten ist sie insgesamt 17 Monate in der Potsdamer Stasi-U-Haftanstalt eingesperrt und muss dort im sogenannten Strafgefangenen-Arbeitskommando Arbeiten in der Waschküche, der Nähstube und vor allem in der Küche verrichten. Nach 17 Monaten wird sie unter unmenschlich engen Bedingungen in einem Gefangenen-Transportwagen in das Stasi-Gefängnis in Karl-Marx-Stadt (Chemnitz) verbracht. Im Zuge des Häftlingsfreikaufs durch die Bundesrepublik erfolgt vier Wochen später in einem Bus-Sammeltransport ihre Ausreise in den Westen.</p>
+			</div>
+			<div class="glass left" style="width: 40%; position: sticky; top: 100px;">
+				<img class="mejpeg left" src="karte.jpeg" alt="der Karte">
+			</div>
+		</div>
+		<script src="../script.js">
+		</script>
+	</body>
+</html>
