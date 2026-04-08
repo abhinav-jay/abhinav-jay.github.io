@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\begin{document}
+
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+Dans ce papier, l'attention sera essentiellement tourné vers les matrices et le patrice de rotation dans le cas continu.
+Soit \( \ket{\psi} \), le vecteur de Jones représentant la direction du champ électrique.
+
+Soit \( R(\theta) \), la matrice de la rotation du champ électrique par la polarization linéaire.
+Cette matrice peut être écrite comme:
+$$
+R(\theta) = 
+\begin{pmatrix}
+	\cos(\theta) & \frac{d}{d\theta}\cos(\theta) \\
+	\sin(\theta) & \frac{d}{d\theta}\sin(\theta)
+\end{pmatrix}
+=
+\begin{pmatrix}
+	\cos(\theta) & -\sin(\theta) \\
+	\sin(\theta) & \cos(\theta)
+\end{pmatrix}
+$$
+
+Nous allons maintenant prendre une valeur \( d\theta \to 0 \).
+$$
+R(d\theta) = 
+\begin{pmatrix}
+	\cos(d\theta) & -\sin(d\theta) \\
+	\sin(d\theta) & \cos(d\theta)
+\end{pmatrix}
+=_{d\theta \to 0}
+\begin{pmatrix}
+	1 & -d\theta \\
+	d\theta & 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+	0 & -d\theta \\
+	d\theta & 0
+\end{pmatrix}
++ I
+$$
+$$
+R(d\theta) = d\theta
+\begin{pmatrix}
+	0 & -1 \\
+	1 & 0
+\end{pmatrix}
++ I
+= d\theta J + I
+$$
+On remarque que \( J^2 = -I \), ou plus généralement que:
+$$
+J^n =
+\left\{
+\begin{array}{ll}
+	I & \quad n \equiv 0 \pmod{4} \\
+	J & \quad n \equiv 1 \pmod{4} \\
+	-I & \quad n \equiv 2 \pmod{4} \\
+	-J & \quad n \equiv 3 \pmod{4}
+\end{array}
+\right.
+$$
+
+\( d\theta \) est une partie infinétisémal de \( \theta \), donc:
+
+$$ 
+\lim_{N \to \infty} \lim_{d\theta \to 0} R(d\theta)^N = R(\theta)
+$$
+$$
+R(d\theta)^N = (J\theta + I)^N = e^{J\theta}
+$$
+Donc la matrice de la rotation continue se traduit comme une exponentielle de matrice. Avec les séries de Taylor, cette exponentielle s'ecrit comme étant:
+$$
+\sum_{n = 0}^{\infty} \frac{J^n \theta^n}{n!} = I + J\theta - I \frac{\theta^2}{2!} - J \frac{\theta^3}{3!} + I \frac{\theta^4}{4!} ...
+$$
+$$
+\sum_{n = 0}^{\infty} \frac{J^n \theta^n}{n!} = I \sum_{n = 0}^{\infty} \frac{(-1)^n \theta^{2n}}{(2n)!} + J \sum_{n = 0}^{\infty} \frac{(-1)^n \theta^{2n+1}}{(2n+1)!}
+$$
+On peut reconnaître les séries de Taylor pour sin et cos.
+Donc cela nous amène à la formule d'Euler pour les matrices:
+$$
+e^{J\theta} = I \cos(\theta) + J \sin(\theta)
+$$
+Nous pouvons de cette maniére exprimer la rotation totale que subit la lumière lorsqu'il y a des polariseurs en continu avec des fonctions trigonométriques.
+
+\end{document}

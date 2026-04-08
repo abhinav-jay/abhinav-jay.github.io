@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\begin{document}
+
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+Dans cette partie, nous allons utiliser une solution aux équations de Maxwell qui va être très
+importante.
+Un rappel sur les équations de Maxwell \\
+Loi de Gauss pour l'électricité:
+$$
+\nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0}
+$$
+Loi de Gauss pour le magnétisme:
+$$
+\nabla \cdot \vec{B} = 0
+$$
+Loi de Faraday pour l'induction:
+$$
+\nabla \times \vec{E} = -\frac{\partial\vec{B}}{\partial t}
+$$
+Loi d'Ampère-Maxwell:
+$$
+\nabla \times \vec{B} = \mu_0 J + \epsilon_0 \mu_0 \frac{\partial\vec{E}}{\partial t}
+$$
+Une solution très utile pour ces équations est la suivante:
+$$
+\vec{E} = e^{i(kz-\omega t)}(E_x \hat{i} + E_y \hat{j})
+$$
+$$
+\vec{B} = \frac{1}{\omega} \hat{k} \times \vec{E}
+$$
+V est le potentiel électrique défini comme étant:
+$$
+\vec{E} = - \nabla V = (-\frac{\partial V}{\partial x},-\frac{\partial V}{\partial y},-\frac{\partial V}{\partial z})
+$$
+Le curl \( \nabla \times \vec{F} \) d'un champ vectoriel est défini comme étant:
+$$
+\nabla \times \vec{F} = 
+\begin{vmatrix}
+	\hat{i} & \hat{j} & \hat{k} \\
+	\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+	F_x & F_y & F_z
+\end{vmatrix}
+$$
+Pour trouver le vecteur de Jones, nous allons d'abord voir de quels composants est véritablement composé le champ électrique, ensuite nous allons trouver exactement les facteurs dans chaque direction.
+$$
+\vec{E} = E_x \hat{i} e^{i(kz-\omega t)} + E_y \hat{j} e^{i(kz-\omega t)} 
+$$
+$$
+\vec{B} = \frac{1}{\omega}\,\hat{k} \times \vec{E}
+$$
+On calcule:
+$$
+\nabla \times \vec{E} = 
+\begin{vmatrix}
+	\hat{i} & \hat{j} & \hat{k} \\
+	\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+	E_x & E_y & E_z
+\end{vmatrix}
+$$
+$$
+\iff \nabla \times \vec{E} =
+\begin{vmatrix}
+	\hat{i} & \hat{j} & \hat{k} \\
+	\frac{\partial E}{\partial x} & \frac{\partial E}{\partial y} & \frac{\partial E}{\partial z} \\
+	\frac{\partial V}{\partial x} & \frac{\partial V}{\partial y} & \frac{\partial V}{\partial z} \\
+\end{vmatrix}
+$$
+$$
+\iff \nabla \times \vec{E} = \hat{i}(\frac{\partial}{\partial y} \cdot -\frac{\partial V}{\partial z} - \frac{\partial}{\partial z} \cdot -\frac{\partial V}{\partial y}) \newline
+- \hat{j}(\frac{\partial}{\partial x} \cdot -\frac{\partial V}{\partial z} - \frac{\partial}{\partial z} \cdot -\frac{\partial V}{\partial x}) \newline
++ \hat{k}(\frac{\partial}{\partial x} \cdot -\frac{\partial V}{\partial y} - \frac{\partial}{\partial y} \cdot -\frac{\partial V}{\partial x})
+$$
+$$
+E_z = 0 \therefore \frac{\partial}{\partial z} = \frac{\partial V}{\partial z} = 0
+$$
+$$
+\therefore \nabla \times \vec{E} = \hat{i}(0+0) - \hat{j}(0+0)
++ \hat{k}(\frac{\partial}{\partial x} \cdot -\frac{\partial V}{\partial y} - \frac{\partial}{\partial y} \cdot -\frac{\partial V}{\partial x})
+$$
+$$
+\iff \nabla \times \vec{E} = \hat{k}(\frac{\partial}{\partial x} \cdot -\frac{\partial V}{\partial y} - \frac{\partial}{\partial y} \cdot -\frac{\partial V}{\partial x})
+$$
+$$
+\therefore \nabla \times \vec{E} \perp \vec{E}
+$$
+Avec la projection de \( E_x \) et de \( E_y \), on peut donc trouver que:
+$$
+E = E_0 \cos(\theta) \hat{i} e^{i(kz-\omega t)} + E_0 \sin(\theta) \hat{j}
+e^{i(kz-\omega t)} \\
+$$
+$$
+\iff E = E_0 (\cos(\theta)\hat{i} + \sin(\theta)\hat{j}) e^{i(kz-\omega t)} \\
+$$
+$$
+\iff E = E_0 e^{i(kz-\omega t)} \ket{\psi}
+$$
+$$
+\iff \ket{\psi} = \begin{pmatrix} \cos(\theta) \\ \sin(\theta) \end{pmatrix}
+$$
+\( \ket{\psi} \) est donc le vecteur de Jones représentant la direction du champ électrique dans
+une polarisation linéaire. Il est composé seulent de \( \hat{i} \) et de \( \hat{j} \),
+mais pas de \( \hat{k} \), car il est perpendiculaire à \( \nabla \times {E} \) qui est composé
+seulement de \( \hat{k} \).
+
+\end{document}

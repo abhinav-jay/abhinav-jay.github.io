@@ -1,0 +1,16 @@
+\documentclass{article}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+\begin{document}
+
+\begin{align*}
+  \bra{a}       &= \bra*{\frac{a}{1}} \\
+  \ket{a}       &= \ket*{\frac{a}{1}} \\
+  \braket{a}{b} &= \braket*{\frac{a}{1}}{\frac{b}{1}}
+\end{align*}
+
+\end{document}

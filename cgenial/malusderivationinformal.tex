@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\begin{document}
+
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+Dans ce papier, nous allons dériver la loi de Malus à partir du vecteur de Jones pour une polarisation linéaire. $ \ket{\psi} $ est le vecteur de Jones. $ I = I_0 \cos^2 \theta $ est la loi de Malus que nous allons dériver. Cette dérivation sera plus simple et moins complète, pour une dérivation plus compléte, il y a un autre papier.\\
+Nous allons commencer par comprendre comment on peut calculer le composant d'un vecteur avec un autre vecteur, c'est très simple, on fait un simple produit scalaire. De la même manière avec un produit scalaire nous pouvons calculer la projection d'un état sur un autre, ce que nous donne donc l'amplitude que cet état a d'être mesuré comme un autre. Ici, le vecteur de Jones représente l'état du champ électrique et nous allons représenter létait de la lumière polarisée avec le vecteur de base $ \hat{i} $.
+
+Donc pour trouver l'amplitude que $ \ket{\psi} $ à d'être mesuré comme étant $ \hat{i} $. Cela se note $ \langle \hat{i} \ket{\psi} $.
+Donc on peut faire le produit scalaire de $ \hat{i} $ et de $ \ket{\psi} $.
+$$ \langle \hat{i} \ket{\psi} = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} \cos \theta \\ \sin \theta \end{pmatrix} $$
+$$ \langle \hat{i} \ket{\psi} = 1 \cdot \cos \theta + 0 \cdot \sin \theta $$
+$$ \langle \hat{i} \ket{\psi} = \cos \theta $$
+
+Donc l'amplitude de mesurer $ \ket{\psi} $ comme étant $ \hat{i} $ est de $ \cos \theta $. \\
+On sait que l'intensité est le carré de l'amplitude, et avec une intensité initiale cela nous donne:
+$$ I = I_0 \cos^2 \theta $$
+Cela est la loi de Malus, donc nous avons pu dériver la loi de Malus avec une simple produit scalaire à partir du vecteur de Jones que nous avons aussi dérivé à partir des équations de Maxwell dans un autre papier.
+
+\end{document}

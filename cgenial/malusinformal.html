@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
+	<link rel="stylesheet" href="../style.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+	<title>Dérivation informelle</title>
+	<style>
+		.mathjax {
+			font-size: 25px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+			width: 100%;
+		}
+
+		p {
+			text-indent: 30px;
+		}
+
+		.links {
+			list-style-type: none;
+		}
+
+		.medium {
+			margin: 10px;
+			display: flex;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 50, 0, 0.7);
+			border: 1px solid rgb(200, 100, 0)
+		}
+
+		.hard {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(100, 0, 0, 0.7);
+			border: 1px solid rgb(200, 0, 0)
+		}
+
+		.easy {
+			display: flex;
+			margin: 10px;
+			height: 10px;
+			font-size: 15px;
+			text-decoration: none;
+			border-radius: 13px;
+			padding: 12px;
+			color: white;
+			background-color: rgba(0, 100, 0, 0.7);
+			border: 1px solid rgb(0, 200, 0)
+		}
+
+		.gap {
+			padding: 3px;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="topnav" id="myTopnav">
+		<button class="icon activebutton" onclick="myFunction()">
+			<div class="menubtn">
+				&#8801;
+			</div>
+		</button>
+		<a target="_blank" href="https://www.cgenial.org/82-nos-actions/145-concours-cgenial" class="name">
+			<button class="activebutton" style="padding: 10px;">
+				<img src="concours_cgenial_logo.png" style="width:100px;height:27px;"
+					alt="Abhinav Jayesh">
+			</button class="activebutton">
+		</a>
+		<button id="light" onclick="dark()">
+			<a class="theme" id="light">
+				<i style="font-size: 20px;" class="fa fa-sun-o"></i>
+			</a>
+		</button>
+		<button id="dark" class="theme" onclick="dark()">
+			<a class="theme" id="dark">
+				<i class="fa fa-moon-o" style="font-size: 20px;"></i>
+			</a>
+		</button>
+		<button><a href="index.html">Page d'acceuil</a></button>
+		<a href="mailto:abhinav.in.mail@gmail.com" target="_blank" class="active">
+			<button class="activebutton">
+				Contact
+				<div class="arrow-wrapper">
+					<div class="arrow"></div>
+
+				</div>
+			</button>
+		</a>
+	</div>
+
+	<div class="box onscroll" id="paradoxe">
+		<center>
+			<div class="text" style="text-align: center;">
+				<h2>Dérivation de la loi de Malus</h2>
+			</div>
+		</center>
+		<center>
+			<div class="mathjax" style="text-align: center; width: 70%; margin: auto;">
+
+				Dans ce papier, nous allons dériver la loi de Malus à partir du vecteur de Jones pour
+				une polarisation linéaire. \( \ket{\psi} \) est le vecteur de Jones. \( I = I_0 \cos^2
+				\theta \) est la loi de Malus que nous allons dériver. Cette dérivation sera plus simple
+				et moins complète ; pour une dérivation plus complète, il y a un autre papier. <br>
+
+				Nous allons commencer par comprendre comment on peut calculer le composant d'un vecteur
+				avec un autre vecteur. C'est très simple : on fait un simple produit scalaire. De la
+				même
+				manière, avec un produit scalaire, nous pouvons calculer la projection d'un état sur un
+				autre, ce qui nous donne l'amplitude que cet état a d'être mesuré comme un autre.
+				Ici, le vecteur de Jones représente l'état du champ électrique et nous allons
+				représenter l'état de la lumière polarisée avec le vecteur de base \( \hat{i} \).
+
+				Donc, pour trouver l'amplitude que \( \ket{\psi} \) a d'être mesuré comme étant \(
+				\hat{i} \),
+				cela se note \( \langle \hat{i} \ket{\psi} \).
+				On peut alors faire le produit scalaire de \( \hat{i} \) et de \( \ket{\psi} \) :
+				\[
+				\langle \hat{i} \ket{\psi} = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \cdot
+				\begin{pmatrix} \cos \theta \\ \sin \theta \end{pmatrix}
+				\]
+				\[
+				\langle \hat{i} \ket{\psi} = 1 \cdot \cos \theta + 0 \cdot \sin \theta
+				\]
+				\[
+				\langle \hat{i} \ket{\psi} = \cos \theta
+				\]
+
+				Donc, l'amplitude de mesurer \( \ket{\psi} \) comme étant \( \hat{i} \) est \( \cos
+				\theta \). <br>
+				On sait que l'intensité est le carré de l'amplitude, et avec une intensité initiale,
+				cela
+				nous donne :
+				\[
+				I = I_0 \cos^2 \theta
+				\]
+				C'est la loi de Malus, donc nous avons pu dériver la loi de Malus avec un simple
+				produit scalaire à partir du vecteur de Jones que nous avons également dérivé à partir
+				des
+				équations de Maxwell dans un autre papier.
+
+			</div>
+	</div>
+	</center>
+	<script src="../script.js">
+	</script>
+</body>
+
+</html>

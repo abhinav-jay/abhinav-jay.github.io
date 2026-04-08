@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\begin{document}
+
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+Dans ce papier, nous allons dériver la loi de Malus à partir du vecteur de Jones pour la polarisation linéaire d'une façon assez formelle. Si vous voulez une façon moins formelle de le faire, il y a aussi un papier avec cela.
+
+Une chose très importante : l'intensité à laquelle la lumière passe peut être exprimée comme \\ (Probabilité que chaque photon passe) $\times$ (Intensité initiale de la lumière).
+
+L'état du champ électrique est compris dans le champ vectoriel 
+\[
+\vec{E}(x, y, z) = E_0 e^{i(kz- \omega t)} \ket{\psi}.
+\]
+
+En mécanique quantique, l'amplitude que quelque chose dans un état $ \ket{\psi} $ soit mesuré dans un autre état $ \ket{\phi} $ est donnée par leur produit intérieur.  
+\[
+\braket{\phi}{\psi} = \int_{\mathbb{R}} \phi^{*} \psi \, dx
+\]
+
+$ u(x, y) $ est une fonction pour normaliser la taille de ce vecteur à 1, telle que :
+\[
+\int_{\mathbb{R}^2} |u(x, y)|^2 \, dx \, dy = 1
+\]
+Nous faisons cela pour normaliser les vecteurs et pour qu'à la fin le produit intérieur ne diverge pas. Plus formellement, cela nous permet de garder le produit intérieur dans $ L^2(\mathbb{C}^2) $, car c'est un espace de Hilbert.
+
+Nous nous positionnons ici dans le plan x-y, pas seulement dans une dimension x, donc l'intégrale sera sur $ \mathbb{R}^2 $ et sur dx dy, pas seulement sur dx. Ici, on doit donc calculer l'amplitude que le champ électrique dans l'état $ \vec{E} $ soit égal à la direction de la polarisation quand il est mesuré. On va ici prendre $ \hat{i} $ pour la direction de la polarisation. Donc ce qu'on doit calculer est :
+\[
+\braket{u}{u} \cdot \braket{\hat{i}}{\vec{E}} = \int_{\mathbb{R}^2} \hat{i}^{*} \vec{E} \cdot u^{*} u \, dx \, dy
+\]
+\[
+\braket{u}{u} \cdot \braket{\hat{i}}{\vec{E}} = \int_{\mathbb{R}^2} \hat{i} \cdot \psi \, E_0 e^{i(kz -\omega t)} u(x,y)^{*} u(x, y) \, dx \, dy
+\]
+\[
+\braket{u}{u} \cdot \braket{\hat{i}}{\vec{E}} = \int_{\mathbb{R}^2} 
+\begin{pmatrix} 1 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} \cos \theta \\ \sin \theta \end{pmatrix} 
+E_0 e^{i(kz -\omega t)} u(x,y)^{*} u(x, y) \, dx \, dy
+\]
+\[
+\braket{u}{u} \cdot \braket{\hat{i}}{\vec{E}} = 
+\begin{pmatrix} 1 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} \cos \theta \\ \sin \theta \end{pmatrix} 
+E_0 e^{i(kz -\omega t)} \int_{\mathbb{R}^2} u(x,y)^{*} u(x, y) \, dx \, dy
+\]
+\[
+\braket{u}{u} \cdot \braket{\hat{i}}{\vec{E}} = \cos \theta \, E_0 e^{i(kz -\omega t)} \int_{\mathbb{R}^2} |u(x,y)|^2 \, dx \, dy
+\]
+\[
+\braket{u}{u} \cdot \braket{\hat{i}}{\vec{E}} = \cos \theta \, E_0 e^{i(kz -\omega t)} \cdot 1
+\]
+\[
+\braket{u}{u} \cdot \braket{\hat{i}}{\vec{E}} = \cos \theta \, E_0 e^{i(kz -\omega t)}
+\]
+
+On peut aussi voir que :
+\[
+\ket{\psi} = \frac{\vec{E}}{E_0 e^{i(kz - \omega t)}}
+\]
+\[
+\implies \braket{\hat{i}}{\psi} = \frac{\braket{\hat{i}}{\vec{E}}}{E_0 e^{i(kz - \omega t)}} = \cos \theta
+\]
+
+On sait que la probabilité de quelque chose est le module de l'amplitude au carré, donc :
+\[
+P = |A|^2
+\]
+\[
+\iff P = |\braket{\hat{i}}{\vec{E}}|^2
+\]
+\[
+\iff P = \cos^2 \theta
+\]
+
+On sait que $ I = I_0 \times P $.  
+Donc, on peut trouver que :
+\[
+I = I_0 \cos^2 \theta
+\]
+
+C'est la loi de Malus, donc on a réussi à trouver la loi de Malus à partir du vecteur de Jones.
+
+\end{document}
