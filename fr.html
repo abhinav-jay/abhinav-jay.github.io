@@ -1,72 +1,79 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#0b1020" />
+		<title>My Portfolio</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="navbar" aria-label="Main navigation">
 
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-		rel="stylesheet">
-	<title>Abhinav Jayesh's website</title>
-	<link rel="icon" type="image/x-icon" href="a.svg">
-</head>
+				<a href="#home" class="logo">
+					<span class="logo-icon">AJ</span>
+					<span>Abhinav Jayesh</span>
+				</a>
 
-<body>
-	<div class="topnav" id="myTopnav">
-		<button class="icon activebutton" onclick="myFunction()">
-			<div class="menubtn">
-				&#8801;
-			</div>
-		</button>
-		<a href="#" class="name">
-			<button class="activebutton">
-				<img src="logo.svg" style="width:100px;height:17px;" alt="Abhinav Jayesh">
-			</button class="activebutton">
-		</a>
-		<button id="light" onclick="dark()">
-			<a class="theme" id="light">
-				<i style="font-size: 20px;" class="fa fa-sun-o"></i>
-			</a>
-		</button>
-		<button id="dark" class="theme" onclick="dark()">
-			<a class="theme" id="dark">
-				<i class="fa fa-moon-o" style="font-size: 20px;"></i>
-			</a>
-		</button>
-		<button><a href="#about">Ma vie</a></button>
-		<button><a href="#education">Mon Éducation</a></button>
-		<button><a href="#interests">Interêts</a></button>
-		<button><a href="#languages">Langues</a></button>
-		<button><a href="index.html">English</a></button>
-		<button><a href="blog/index.html">Blog (disponible qu'en anglais)</a></button>
-		<button><a href="cgenial/index.html">Concours Cgénial</a></button>
-		<a href="https://github.com/abhinav-jay/" target="_blank" class="active">
-			<button class="activebutton">
-				Contacter
-				<div class="arrow-wrapper">
-					<div class="arrow"></div>
+				<button
+						class="menu-toggle"
+						id="menu-toggle"
+						aria-label="Open navigation menu"
+						aria-expanded="false"
+						aria-controls="nav-content"
+						>
+						<span></span>
+						<span></span>
+						<span></span>
+				</button>
 
+				<div class="nav-content" id="nav-content">
+					<ul class="nav-links">
+						<li><a href="#about">Ma vie</a></li>
+						<li><a href="#education">Éducation</a></li>
+						<li><a href="#interests">Centre d'interêts</a></li>
+						<li><a href="index.html">English</a></li>
+					</ul>
+
+					<div class="nav-actions">
+						<button
+								class="theme-toggle"
+								id="theme-toggle"
+								aria-label="Switch to light theme"
+								title="Toggle theme"
+								>
+								<span id="theme-icon" aria-hidden="true">☀</span>
+						</button>
+
+						<a href="https://github.com/abhinav-jay" class="contact-btn">
+							Contactez moi
+							<span aria-hidden="true">↗</span>
+						</a>
+					</div>
 				</div>
-			</button>
-		</a>
-	</div>
+			</nav>
+		</header>
 
-	<div class="box onscroll" id="first">
-		<div class="text left" id="name">
-			<h2>Abhinav Jayesh</h2>
-		</div>
-		<div class="glass right">
-			<img class="mejpeg right" src="me.jpeg">
-		</div>
-	</div>
-	<div class="box onscroll" id="about">
-		<div class="text left">
-			<h2>Ma vie</h2>
-		</div>
-		<div class="glass content right">
+		<main id="home">
+			<section class="hero">
+				<h1>Abhinav<br />
+					<span class="gradient-text">Jayesh</span>
+				</h1>
+				<div class="hero-image">
+					<div class="image-bg">
+						<img src="me.png">
+					</div>
+					<div class="img-mobile">
+						<img src="me.png">
+					</div>
+				</div>
+			</section>
+
+			<section class="content-section" id="about">
+				<h2>Ma vie</h2>
 			<p> Je suis né en Inde dans l'état du Kerala. J'ai vécu en Inde jusqu'à l'âge de sept ans. Plus
 				tard, j'ai
 				déménagé à Paris. Je vivais rue Mouton Duvernet dans le 14ème arrondissement. L'école
@@ -77,15 +84,10 @@
 				déménagé à Sceaux où je vis
 				encore.
 			<p>
-		</div>
-	</div>
-	<div class="line">
-	</div>
-	<div class="box onscroll" id="education">
-		<div class="text left">
-			<h2>Éducation</h2>
-		</div>
-		<div class="glass content right">
+			</section>
+
+			<section class="content-section" id="education">
+				<h2>Education</h2>
 			<p>J'ai commencé mon éducation à <a class="a" href="https://en.wikipedia.org/wiki/Bangalore"
 					target="_blank">Bengaluru</a>. J'ai étudié à <a class="a"
 					href="https://mountlitera.com/" target="_blank">Mount
@@ -100,57 +102,26 @@
 				ça.
 				J'ai eu une note de 757.5/800 au Diplôme National du Brevet.
 			</p>
-		</div>
-	</div>
-	<div class="line">
-	</div>
-	<div class="box onscroll" id="interests">
-		<div class="text left">
-			<h2>Interêts</h2>
-		</div>
-		<div class="glass content right">
+			</section>
+
+			<section class="content-section" id="interests">
+				<h2>Interests</h2>
 			<ul>
-				<li>Maths - Je vais régulièrement au club de matsh <a target="_blank"
-						href="https://www.parimaths.fr/" class="a">Parimaths</a>.</li>
-				<li>Physique</li>
-				<li>Programmage - J'ai fait ce site, je peux aussi coder en Python.</li>
-				<li>Dactylographie - Je tape à une vitesse de 174 mots par minute(WPM) sur un test de 10
+				<li><p>Maths - Je vais régulièrement au club de matsh <a target="_blank"
+											 href="https://www.parimaths.fr/" class="a">Parimaths</a>.</p></li>
+				<li><p>Physique</p></li>
+				<li><p>Programmage</p></li>
+				<li><p>Dactylographie - Je tape à une vitesse de 174 mots par minute(WPM) sur un test de 10
 					mots. En
 					comparaison, un adulte écrit à environ 40wpm en moyenne. <a
-						href="https://monkeytype.com/profile/abhiblazer" class="a">Ceci</a> est
-					mon
-					compte monkeytype.</li>
-				<li>Claviers Méchaniques - Mon clavier est un Drevo Calibur v2 TE. Il a des actionneurs
+														 href="https://monkeytype.com/profile/abhiblazer" class="a">Ceci</a> est
+													 mon
+													 compte monkeytype.</p></li>
+				<li><p>Claviers Méchaniques - Mon clavier est un Drevo Calibur v2 TE. Il a des actionneurs
 					TTC bleu
-					que j'aime beaucoup même s'ils sont un peu bruyants :).</li>
+					que j'aime beaucoup même s'ils sont un peu bruyants.</p></li>
 			</ul>
-		</div>
-	</div>
-	<div class="line">
-	</div>
-	<div class="box onscroll" id="languages">
-		<div class="text left">
-			<h2>Langues</h2>
-		</div>
-		<div class="glass content right">
-			<ul>
-				<li><a class="a" href="https://en.wikipedia.org/wiki/English_language"
-						target="_blank">Anglais</a></li>
-				<li><a class="a" href="https://en.wikipedia.org/wiki/French_language"
-						target="_blank">Français</a></li>
-				<li><a class="a" href="https://en.wikipedia.org/wiki/Malayalam"
-						target="_blank">Malayalam</a></li>
-			</ul>
-		</div>
-	</div>
-	<center class="onscroll">
-		<footer>
-			Fait par Abhinav Jayesh avec Neovim
-		</footer>
-	</center>
-	<script src="script.js">
-	</script>
-
-</body>
-
+			</section>
+		</main>
+	</body>
 </html>
