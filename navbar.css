@@ -1,0 +1,278 @@
+
+/* ================================
+   FLOATING GLASS NAVBAR
+================================ */
+
+:root {
+  --nav-glass: rgba(15, 27, 51, 0.72);
+  --nav-border: rgba(160, 195, 255, 0.19);
+  --nav-text: #aebed8;
+  --nav-white: #ffffff;
+}
+
+.glass-nav {
+    position: fixed; /* already in your CSS */
+    isolation: isolate;
+}
+
+/* .nav-indicator { */
+/*     position: absolute; */
+/*     z-index: 0; */
+/**/
+/*     top: 8px; */
+/*     left: 8px; */
+/**/
+/*     height: 46px; */
+/*     width: 46px; */
+/**/
+/*     border-radius: 100px; */
+/**/
+/*     background: linear-gradient( */
+/*         135deg, */
+/*         rgba(69, 143, 255, 0.42), */
+/*         rgba(65, 104, 220, 0.23) */
+/*     ); */
+/**/
+/*     border: 1px solid rgba(140, 185, 255, 0.22); */
+/**/
+/*     box-shadow: */
+/*         0 2px 15px rgba(54, 125, 255, 0.12), */
+/*         inset 0 1px 1px rgba(255,255,255,0.15); */
+/**/
+/*     pointer-events: none; */
+/**/
+/*     transition: */
+/*         transform 450ms cubic-bezier(.22, 1, .36, 1), */
+/*         width 450ms cubic-bezier(.22, 1, .36, 1); */
+/**/
+/*     will-change: transform, width; */
+/* } */
+
+.nav-indicator {
+    position: absolute;
+    
+    /* background: linear-gradient( */
+    /*     135deg, */
+    /*     rgba(69, 143, 255, 0.42), */
+    /*     rgba(65, 104, 220, 0.23) */
+    /* ); */
+	background: linear-gradient(90deg, #a78bfa, #c084fc, #60a5fa);
+	opacity: 0.3;
+
+
+    top: 0;
+    left: 0;
+
+    width: 46px;
+    height: 46px;
+
+    box-sizing: border-box;
+
+    border-radius: 100px;
+
+    pointer-events: none;
+    z-index: 0;
+
+    transition:
+        transform 450ms cubic-bezier(.22, 1, .36, 1),
+        width 450ms cubic-bezier(.22, 1, .36, 1),
+        height 450ms cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Keep links above the indicator */
+.nav-link {
+    position: relative;
+    z-index: 1;
+    background: transparent !important;
+}
+
+/* Remove the old individual active background */
+.nav-link.active {
+    color: white;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.nav-divider {
+    width: 1px;
+    height: 24px;
+    margin: 0 7px;
+    flex-shrink: 0;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255,255,255,0.65),
+        transparent
+    );
+}
+
+.glass-nav {
+  position: fixed;
+  z-index: 9999;
+
+  top: calc(25px + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 8px;
+
+  width: max-content;
+  max-width: calc(100vw - 28px);
+
+  background: var(--nav-glass);
+
+  border: 1px solid var(--nav-border);
+  border-radius: 100px;
+
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+
+  box-shadow:
+    0 12px 45px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12);
+
+  transition:
+    background .35s ease,
+    box-shadow .35s ease,
+    transform .35s ease;
+}
+
+/* Individual links */
+
+.nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  height: 46px;
+  min-width: 46px;
+  padding: 0 15px;
+
+  color: var(--nav-text);
+  text-decoration: none;
+
+  border-radius: 100px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  transition:
+    color .3s ease,
+    background .3s ease,
+    transform .3s ease;
+}
+
+/* Icons */
+
+.nav-link svg {
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  flex-shrink: 0;
+
+  transition: transform .3s ease;
+}
+
+/* Active state */
+
+.nav-link.active {
+  color: var(--nav-white);
+
+  background: linear-gradient(
+    135deg,
+    rgba(69, 143, 255, 0.42),
+    rgba(65, 104, 220, 0.23)
+  );
+
+  box-shadow:
+    inset 0 0 0 1px rgba(140, 185, 255, 0.22),
+    0 2px 15px rgba(54, 125, 255, 0.12);
+}
+
+.nav-link.active svg {
+  color: #8ebaff;
+  filter: drop-shadow(0 0 5px rgba(90, 155, 255, .6));
+}
+
+/* Hover */
+
+.nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.nav-link:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Click */
+
+.nav-link:active {
+  transform: scale(.94);
+}
+
+/* Keyboard accessibility */
+
+.nav-link:focus-visible {
+  outline: 2px solid #8ebaff;
+  outline-offset: 3px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .glass-nav {
+    top: calc(16px + env(safe-area-inset-bottom));
+    width: calc(100% - 28px);
+    justify-content: space-around;
+    gap: 2px;
+    padding: 7px;
+  }
+
+  .nav-link {
+    flex: 1;
+    min-width: 0;
+    height: 48px;
+    padding: 0;
+    gap: 0;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .nav-link svg {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-nav,
+  .nav-link,
+  .nav-link svg {
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
