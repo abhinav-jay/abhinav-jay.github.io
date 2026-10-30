@@ -550,7 +550,7 @@ button {
 
   .hero-image img {
     width: min(100%, 380px);
-    max-height: 480px;
+    /* max-height: 480px; */
   }
 
   ul {
