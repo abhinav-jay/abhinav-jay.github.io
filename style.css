@@ -516,7 +516,7 @@ button {
 
 	.img-mobile {
 		z-index: 0;
-		aspect-ratio: 1.2;
+		/* aspect-ratio: 1.2; */
 		display: inline;
 		/* margin: auto; */
 		border-radius: 10%;
