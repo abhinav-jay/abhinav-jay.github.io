@@ -105,11 +105,16 @@ button {
 }
 
 .hero-link {
-	margin-top: 32px;
+	/* margin-top: 32px; */
 	display: inline-flex;
 	gap: 12px;
 	color: var(--text);
 	font-weight: 600;
+	background: linear-gradient(90deg, #a78bfa80, #c084fc80, #60a5fa80);
+	border-radius: 24px;
+	padding: 10px;
+	backdrop-filter: blur(20px);
+	--webkit-backdrop-filter: blur(20px);
 }
 
 .hero-link:hover span {
@@ -295,11 +300,13 @@ button {
 	gap: 8px;
 	color: var(--text);
 	font-weight: 600;
-	transition: color 0.25s ease;
+	transition: all 0.25s ease;
 }
 
 .hero-link:hover {
-	color: var(--accent);
+	transform: translateY(-4px);
+	transition: all 0.25s ease;
+	box-shadow: 0px 4px 15px 0px rgba(255, 255, 255, 0.3);
 }
 
 /* ---------- Transparent portrait ---------- */
@@ -351,8 +358,14 @@ button {
 		overflow: visible;
 	}
 
+	.hero-text,
 	.hero h1 {
 		text-align: center;
+		margin: auto;
+	}
+
+	.hero-link {
+		display: none;
 	}
 
 	.image-bg {
@@ -692,6 +705,16 @@ div#mariecurie {
 	background-size: cover;
 }
 
+div#keyboard {
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKqp75onRVM0wvTfwqUTGr3GPkIncAwVNZRdaXajrFPvtEjO463PXLPgI&s=10);
+	background-size: cover;
+}
+
+div#monkeytype {
+	background: url(monkeytype.png);
+	background-size: cover;
+}
+
 .gototop {
 	position: fixed;
 	right: 0;
@@ -735,4 +758,67 @@ div#mariecurie {
 	stroke: currentColor;
 	stroke-width: 1.8;
 	stroke-linecap: round;
+
+}
+
+.card {
+	margin: 15px;
+}
+
+.projectcard {
+	/* margin: 2vw; */
+	/* width: 38vw; */
+	position: relative;
+	height: 300px;
+	min-width: 300px;
+	text-align: right;
+}
+
+.projectcard p {
+	padding: 10px;
+	top: 0;
+	width: 100%;
+	margin-top: auto;
+	background-image: linear-gradient(to top, rgba(0,0,0,0), var(--bg), var(--bg));
+	float: right;
+	display: inline-block;
+	height: 30%;
+
+}
+
+.container {
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+	grid-gap: 0.75rem; /* To define the gap between rows/columns */
+	gap: 0.75rem;
+	padding: 0.75rem;
+}
+
+/* loader */
+
+/* From Uiverse.io by xXJollyHAKERXx */ 
+.spinner {
+	background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+	width: 100px;
+	height: 100px;
+	animation: spinning82341 1.7s linear infinite;
+	text-align: center;
+	border-radius: 50px;
+	filter: blur(1px);
+	box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+	background-color: rgb(36, 36, 36);
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+	to {
+		transform: rotate(360deg);
+	}
 }
