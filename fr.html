@@ -8,10 +8,37 @@
 		<title>Abhinav Jayesh</title>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="navbar.css" />
+		<link rel="stylesheet" href="search.css" />
+		<link rel="stylesheet" href="skills.css">
 		<script src="script.js" defer></script>
 		<script src="navbar.js" defer></script>
+		<script src="search.js" defer></script>
 	</head>
 	<body>
+		<div class="floating-elements">
+			<a class="gototop" href="#">
+				<span>Haut de page</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+				</svg>
+			</a>
+
+			<!-- Search trigger -->
+			<button class="search-trigger" id="searchTrigger" aria-label="Search (Ctrl+K)">
+				<span>Rechercher</span>
+
+				<span>C-k</span>
+				<svg width="16" height="16" viewBox="0 0 24 24"
+							    fill="none"
+							    style="stroke: currentColor; stroke-width: 3.5px !important;"
+							    stroke-linecap="round"
+							    stroke-linejoin="round">
+					<circle cx="11" cy="11" r="7.5"/>
+					<path d="m16.5 16.5 4 4"/>
+				</svg>
+			</button>
+		</div>
+
 		<!-- Floating Glass Navigation -->
 		<nav class="glass-nav" aria-label="Main navigation">
 			<div class="nav-indicator"></div>
@@ -20,7 +47,7 @@
 				<svg viewBox="0 0 24 24">
 					<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1z"/>
 				</svg>
-				<span>Home</span>
+				<span>Acceuil</span>
 			</a>
 
 			<a href="#about" class="nav-link active" data-section="about">
@@ -28,7 +55,7 @@
 					<circle cx="12" cy="8" r="4"/>
 					<path d="M5 21a7 7 0 0 1 14 0"/>
 				</svg>
-				<span>About</span>
+				<span>Ma vie</span>
 			</a>
 
 			<a href="#education" class="nav-link" data-section="education">
@@ -37,7 +64,7 @@
 					<path d="M6 12v5c3 3 9 3 12 0v-5"/>
 					<path d="M22 10v6"/>
 				</svg>
-				<span>Education</span>
+				<span>Éducation</span>
 			</a>
 
 			<a href="#interests" class="nav-link" data-section="interests">
@@ -46,7 +73,7 @@
 					<path d="M19 14L20 17L23 18L20 19L19 22L18 19L15 18L18 17L19 14Z"/>
 					<path d="M5 2L5.8 4.2L8 5L5.8 5.8L5 8L4.2 5.8L2 5L4.2 4.2L5 2Z"/>
 				</svg>
-				<span>Interests</span>
+				<span>Interêts</span>
 			</a>
 
 			<div class="nav-divider"></div>
@@ -89,16 +116,22 @@
 		<div class="homepage-wrap">
 			<div class="homepage" id="home">
 				<section class="hero">
-					<h1>Abhinav<br />
-						<span class="gradient-text">Jayesh</span>
-					</h1>
+					<div>
+						<h1>Abhinav<br />
+							<span class="gradient-text">Jayesh</span>
+						</h1>
+						<a class="hero-link" href="#about">découvrir plus sur ma vie<svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.0002 15.0001V9.00005M15.0002 9.00005H9.00019M15.0002 9.00005L9.00019 14.9999M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg></a>
+					</div>
 					<img class="image-bg" src="me.png">
-					<div class="glass-card img-mobile">
+					<div class="img-mobile">
 						<img src="me.png">
 					</div>
 				</section>
 			</div>
 		</div>
+
 		<main id="main">
 
 			<section class="content-section" id="about">
@@ -113,6 +146,115 @@
 				déménagé à Sceaux où je vis
 				encore.
 				<p>
+				<div class="card">
+					<h3>Languages</h3>
+					<div class="marquee">
+						<!-- From Uiverse.io by xXJollyHAKERXx --> 
+						<div class="marquee-track">
+							<a href="https://en.wikipedia.org/wiki/English_language" target="_blank">
+								<div class="skill-card glass-card card">
+
+									<div class="card-header">
+										<div class="skill-icon">En</div>
+
+										<div class="skill-info">
+											<h3>English</h3>
+										</div>
+									</div>
+
+									<div class="progress-track">
+										<div class="progress-fill"></div>
+									</div>
+
+								</div>
+							</a>
+							<a target="_blank" href="https://en.wikipedia.org/wiki/French_language">
+								<div class="skill-card glass-card card">
+
+									<div class="card-header">
+										<div class="skill-icon">Fr</div>
+
+										<div class="skill-info">
+											<h3>French</h3>
+										</div>
+									</div>
+
+									<div class="progress-track">
+										<div class="progress-fill"></div>
+									</div>
+
+								</div>
+							</a>
+							<a target="_blank" href="https://en.wikipedia.org/wiki/Malayalam">
+								<div class="skill-card glass-card card">
+
+									<div class="card-header">
+										<div class="skill-icon">Ml</div>
+
+										<div class="skill-info">
+											<h3>Malayalam</h3>
+										</div>
+									</div>
+
+									<div class="progress-track">
+										<div class="progress-fill"></div>
+									</div>
+
+								</div>
+							</a>
+							<a href="https://en.wikipedia.org/wiki/English_language" target="_blank">
+								<div class="skill-card glass-card card">
+
+									<div class="card-header">
+										<div class="skill-icon">En</div>
+
+										<div class="skill-info">
+											<h3>English</h3>
+										</div>
+									</div>
+
+									<div class="progress-track">
+										<div class="progress-fill"></div>
+									</div>
+
+								</div>
+							</a>
+							<a target="_blank" href="https://en.wikipedia.org/wiki/French_language">
+								<div class="skill-card glass-card card">
+
+									<div class="card-header">
+										<div class="skill-icon">Fr</div>
+
+										<div class="skill-info">
+											<h3>French</h3>
+										</div>
+									</div>
+
+									<div class="progress-track">
+										<div class="progress-fill"></div>
+									</div>
+
+								</div>
+							</a>
+							<a target="_blank" href="https://en.wikipedia.org/wiki/Malayalam">
+								<div class="skill-card glass-card card">
+
+									<div class="card-header">
+										<div class="skill-icon">Ml</div>
+
+										<div class="skill-info">
+											<h3>Malayalam</h3>
+										</div>
+									</div>
+
+									<div class="progress-track">
+										<div class="progress-fill"></div>
+									</div>
+
+								</div>
+							</a>
+						</div>
+					</div>
 			</section>
 
 			<section class="content-section" id="education">
@@ -131,6 +273,53 @@
 																ça.
 																J'ai eu une note de 757.5/800 au Diplôme National du Brevet.
 				</p>
+				<div class="marquee">
+					<div class="marquee-track">
+
+						<!-- First set -->
+						<div id="zeeschool" class="marquee-card glass-card">
+							<p>Mount Litera Zee School</p>
+						</div>
+
+						<div id="vydehi" class="marquee-card glass-card">
+							<p>Vydehi School of Excellence</p>
+						</div>
+
+						<div id="delambre" class="marquee-card glass-card">
+							<p>École élémentaire Delambre</p>
+						</div>
+
+						<div id="stmarcel" class="marquee-card glass-card">
+							<p>École élémentaire des Clos St Marcel</p>
+						</div>
+
+						<div id="mariecurie" class="marquee-card glass-card">
+							<p>Cité Scolaire Marie-Curie</p>
+						</div>
+
+						<!-- Duplicate set for seamless loop -->
+						<div id="zeeschool" class="marquee-card glass-card">
+							<p>Mount Litera Zee School</p>
+						</div>
+
+						<div id="vydehi" class="marquee-card glass-card">
+							<p>Vydehi School of Excellence</p>
+						</div>
+
+						<div id="delambre" class="marquee-card glass-card">
+							<p>École élémentaire Delambre</p>
+						</div>
+
+						<div id="stmarcel" class="marquee-card glass-card">
+							<p>École élémentaire des Clos St Marcel</p>
+						</div>
+
+						<div id="mariecurie" class="marquee-card glass-card">
+							<p>Cité Scolaire Marie-Curie</p>
+						</div>
+					</div>
+
+				</div>
 			</section>
 
 			<section class="content-section" id="interests">
@@ -142,7 +331,7 @@
 					<li><p>Programmage</p></li>
 					<li><p>Dactylographie - Je tape à une vitesse de 174 mots par minute(WPM) sur un test de 10
 						mots. En
-						comparaison, un adulte écrit à environ 40wpm en moyenne. <a
+						comparaison, une personne écrit à environ 40wpm en moyenne. <a
 															 href="https://monkeytype.com/profile/abhiblazer" class="a">Ceci</a> est
 														 mon
 														 compte monkeytype.</p></li>
@@ -150,6 +339,18 @@
 						TTC bleu
 						que j'aime beaucoup même s'ils sont un peu bruyants.</p></li>
 				</ul>
+				/div class="container">
+					<div class="projectcard glass-card" id="keyboard">
+						<p>My keyboard</p>
+					</div>
+
+					<a target="_blank" href="https://monkeytype.com/profile/abhiblazer">
+
+					<div class="projectcard glass-card" id="monkeytype">
+						<p>My Monkeytype Profile</p>
+					</div>
+					</a>
+				</div>
 			</section>
 		</main>
 	</body>

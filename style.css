@@ -706,7 +706,7 @@ div#mariecurie {
 }
 
 div#keyboard {
-	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKqp75onRVM0wvTfwqUTGr3GPkIncAwVNZRdaXajrFPvtEjO463PXLPgI&s=10);
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREo_wJeQ4yiHDukLXVkUqSY4KYolJlwG25gmDI2oi6Nw&s=10);
 	background-size: cover;
 }
 
@@ -779,7 +779,7 @@ div#monkeytype {
 	top: 0;
 	width: 100%;
 	margin-top: auto;
-	background-image: linear-gradient(to top, rgba(0,0,0,0), var(--bg), var(--bg));
+	background-image: linear-gradient(to top right, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), var(--bg), var(--bg));
 	float: right;
 	display: inline-block;
 	height: 30%;
@@ -822,3 +822,16 @@ div#monkeytype {
 		transform: rotate(360deg);
 	}
 }
+
+@media (max-width: 850px) {
+	.container {
+		display: block;
+	}
+	.projectcard {
+		display: block;
+		height: background;
+		margin-top: 10px;
+	}
+
+}
+
